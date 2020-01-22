@@ -6,43 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="USUARIO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CONTRASEÑA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        app:srcCompat="@drawable/candado"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="402dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="55dp"
-        android:layout_height="72dp"
+        android:layout_width="42dp"
+        android:layout_height="52dp"
         app:srcCompat="@drawable/user"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="215dp" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="283dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="65dp"
-        android:layout_height="58dp"
-        app:srcCompat="@drawable/candado"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="424dp" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="USUARIO"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="CONTRASEÑA"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
