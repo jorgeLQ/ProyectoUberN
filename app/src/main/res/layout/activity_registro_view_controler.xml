@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/RegistrarE" />
 
     <TextView
-        android:id="@+id/Registrar C"
+        android:id="@+id/RegistrarC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/RegistrarEstablecimiento" />
 
     <Button
-        android:id="@+id/Registara Establecimiento"
+        android:id="@+id/RegistaraCondutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -87,5 +87,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Registrar C" />
+        app:layout_constraintTop_toBottomOf="@+id/RegistrarC" />
 </androidx.constraintlayout.widget.ConstraintLayout>
