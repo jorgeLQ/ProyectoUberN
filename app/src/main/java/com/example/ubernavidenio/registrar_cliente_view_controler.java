@@ -14,8 +14,10 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_cliente_view_controler);
 
-        Button btnRegTarjeta1 = (Button) findViewById(R.id.REGISTRARC);
-        btnRegTarjeta1.setOnClickListener(new View.OnClickListener() {
+
+        Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
+        btnRegTarjet.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), registro_targeta_view_controler.class);
