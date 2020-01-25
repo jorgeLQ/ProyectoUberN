@@ -18,7 +18,7 @@
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +39,8 @@
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/login"
@@ -75,21 +76,19 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="390dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginBottom="72dp"
-        android:src="@drawable/logou"
-        app:layout_constraintBottom_toTopOf="@+id/username"
+        android:id="@+id/imageView5"
+        android:layout_width="430dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logou" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="38dp"
-        android:layout_height="36dp"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
         android:layout_marginStart="41dp"
         android:layout_marginTop="86dp"
         android:layout_marginEnd="12dp"
@@ -97,6 +96,7 @@
         android:src="@drawable/candado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
