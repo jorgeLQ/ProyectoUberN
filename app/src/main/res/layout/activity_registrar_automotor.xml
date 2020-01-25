@@ -6,4 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".registrarAutomotor">
 
+    <Button
+        android:id="@+id/btnFMatricula"
+        android:layout_width="123dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="481dp"
+        tools:text="SUBIR FOTO" />
+
+    <TextView
+        android:id="@+id/txtinfMatricula"
+        android:layout_width="367dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:text="La foto debe contener toda la información en el documento de registro. Recuerde: - No se aceptan vehículos de alquiler - No se aceptan fotografías de placas"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <TextView
+        android:id="@+id/txtMatricula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sube una foto de la Matrícula del Vehículo"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="430dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logou" />
+
+    <Button
+        android:id="@+id/btnFLicencia"
+        android:layout_width="123dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="273dp"
+        tools:text="SUBIR FOTO" />
+
+    <TextView
+        android:id="@+id/txtLicencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sube una foto de tu Licencia de Conducir"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <TextView
+        android:id="@+id/txtinfLicencia"
+        android:layout_width="367dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:text="La foto debe contener toda la información en la parte frontal de la licencia. Recuerde que los requisitos son: - Edad mínima: 18 años."
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="188dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
