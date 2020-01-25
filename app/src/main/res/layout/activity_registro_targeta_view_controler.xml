@@ -152,6 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
+
         android:layout_marginTop="2dp"
         android:layout_marginEnd="153dp"
         android:layout_marginBottom="17dp"
@@ -177,4 +178,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="62dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="177dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/rvisa" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="81dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="167dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/rmastercard" />
+  
 </androidx.constraintlayout.widget.ConstraintLayout>
