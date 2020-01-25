@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
         <activity android:name=".registrar_cliente_view_controler"></activity>
         <activity android:name=".registro_targeta_view_controler" />
         <activity android:name=".login_view_controler" />
