@@ -11,14 +11,15 @@
         android:layout_width="241dp"
         android:layout_height="45dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="220dp"
         android:layout_marginEnd="24dp"
 
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +29,7 @@
         android:layout_height="49dp"
 
         android:layout_marginStart="12dp"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="74dp"
         android:layout_marginBottom="91dp"
         android:hint="@string/prompt_password"
@@ -38,9 +39,10 @@
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/username"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/login"
@@ -48,7 +50,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
         android:enabled="false"
@@ -89,14 +90,13 @@
         android:id="@+id/imageView2"
         android:layout_width="43dp"
         android:layout_height="45dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="343dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="300dp"
         android:src="@drawable/candado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/password"
-        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -104,13 +104,13 @@
         android:id="@+id/imageView3"
         android:layout_width="46dp"
         android:layout_height="56dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="57dp"
         android:src="@drawable/user"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toStartOf="@+id/username"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
