@@ -15,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".registrar_cliente_view_controler"></activity>
-        <activity android:name=".registro_targeta_view_controler" />
+        <activity android:name=".registar_automotor_view_controler"></activity>
+        <activity android:name=".registrar_entregador_view_controler" />
+        <activity android:name=".registrar_cliente_view_controler" />
+        <activity android:name=".registrar_targeta_view_controler" />
         <activity android:name=".login_view_controler" />
         <activity
             android:name=".ui.login.Login_view_cotroler"
@@ -38,7 +38,7 @@
         <activity
             android:name=".mapas_view_controler"
             android:label="@string/title_activity_mapas_view_controler" />
-        <activity android:name=".registroViewControler" />
+        <activity android:name=".registrar_view_controler" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

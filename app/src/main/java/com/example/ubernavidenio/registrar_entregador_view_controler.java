@@ -7,18 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class registrarAutomotor extends AppCompatActivity {
+public class registrar_entregador_view_controler extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar_automotor);
+        setContentView(R.layout.activity_registrar_entregador_view_controler);
 
-        Button btnAutomor = (Button) findViewById(R.id.btnREntregador);
+        Button btnAutomor = (Button) findViewById(R.id.BtnRegistar);
         btnAutomor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), registrarAutomotor.class);
+                Intent intent = new Intent (v.getContext(), registar_automotor_view_controler.class);
                 startActivityForResult(intent, 0);
             }
         });

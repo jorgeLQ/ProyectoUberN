@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registrar_automotor">
+    tools:context=".registar_automotor_view_controler">
 
     <Button
         android:id="@+id/btnRAAceptar2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="329dp"
         android:text="Cancelar"
-        app:layout_constraintStart_toEndOf="@+id/btnRAAceptar"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroMatricula" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/txtNumeroMatricula"
         android:layout_width="213dp"
         android:layout_height="45dp"
-        android:layout_marginStart="34dp"
         android:layout_marginTop="23dp"
+        android:layout_marginEnd="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Número de Placa"
-        app:layout_constraintStart_toEndOf="@+id/lbNumeroPlaca"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNumeroChasis" />
 
     <TextView
@@ -34,9 +33,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="49dp"
-        android:layout_marginBottom="56dp"
         android:text="Número de Placa"
-        app:layout_constraintBottom_toTopOf="@+id/btnRAAceptar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbNumeroChasis" />
 
@@ -69,11 +66,9 @@
         android:id="@+id/lbRegistrarAutomotor"
         android:layout_width="0dp"
         android:layout_height="19dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="261dp"
-        android:text="Registrar Automotor"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="8dp"
+        android:text="REGISTRAR AUTOMOTOR"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -82,39 +77,29 @@
         android:layout_width="116dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginTop="52dp"
         android:text="Número de Chasis"
-        app:layout_constraintBottom_toTopOf="@+id/lbNumeroPlaca"
-        app:layout_constraintEnd_toStartOf="@+id/txtNumeroChasis"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbRegistrarAutomotor" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
         android:id="@+id/txtNumeroChasis"
         android:layout_width="213dp"
         android:layout_height="45dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Número de Chasis"
-        app:layout_constraintBottom_toTopOf="@+id/txtNumeroMatricula"
-        app:layout_constraintStart_toEndOf="@+id/lbNumeroChasis"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbRegistrarAutomotor" />
 
     <Button
         android:id="@+id/btnRAAceptar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="97dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="329dp"
         android:text="Aceptar"
-        app:layout_constraintEnd_toStartOf="@+id/btnRAAceptar2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbNumeroPlaca" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), registro_targeta_view_controler.class);
+                Intent intent = new Intent (v.getContext(), registrar_targeta_view_controler.class);
                 startActivityForResult(intent, 0);
             }
         });
