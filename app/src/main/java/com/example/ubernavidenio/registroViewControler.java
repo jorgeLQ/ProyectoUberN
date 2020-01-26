@@ -23,6 +23,15 @@ public class registroViewControler extends AppCompatActivity {
             }
         });
 
+        Button btnE= (Button) findViewById(R.id.RegistaraConductor);
+        btnE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), registro_entregador_view_controller.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
     }
 
 

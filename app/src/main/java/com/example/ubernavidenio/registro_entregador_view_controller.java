@@ -14,11 +14,11 @@ public class registro_entregador_view_controller extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_entregador_view_controller);
 
-        Button btnConductor = (Button) findViewById(R.id.RegistaraCondutor);
-        btnConductor.setOnClickListener(new View.OnClickListener() {
+        Button btnAutomor = (Button) findViewById(R.id.btnREntregador);
+        btnAutomor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), registro_entregador_view_controller.class);
+                Intent intent = new Intent (v.getContext(), registrar_automotor.class);
                 startActivityForResult(intent, 0);
             }
         });
