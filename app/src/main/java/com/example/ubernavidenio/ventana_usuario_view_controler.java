@@ -1,5 +1,6 @@
 package com.example.ubernavidenio;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
 
 public class ventana_usuario_view_controler extends AppCompatActivity {
 
@@ -35,6 +37,10 @@ public class ventana_usuario_view_controler extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent (view.getContext(), mapas_view_controler.class);
+                startActivityForResult(intent, 0);
+
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -51,6 +57,8 @@ public class ventana_usuario_view_controler extends AppCompatActivity {
         NavController navController=Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
     }
 
     @Override
