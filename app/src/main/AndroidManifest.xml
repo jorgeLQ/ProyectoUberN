@@ -15,7 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".registar_automotor_view_controler"></activity>
+        <activity
+            android:name=".ventana_entregador_view_controler"
+            android:label="@string/title_activity_ventana_entregador_view_controler"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ventana_usuario_view_controler"
+            android:label="@string/title_activity_ventana_usuario_view_controler"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".registar_automotor_view_controler" />
         <activity android:name=".registrar_entregador_view_controler" />
         <activity android:name=".registrar_cliente_view_controler" />
         <activity android:name=".registrar_targeta_view_controler" />

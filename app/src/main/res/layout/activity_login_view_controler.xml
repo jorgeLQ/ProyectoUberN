@@ -52,13 +52,13 @@
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
-        android:enabled="false"
         android:text="REGISTRAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.405" />
+
 
     <ProgressBar
         android:id="@+id/loading"
@@ -113,4 +113,7 @@
         app:layout_constraintEnd_toStartOf="@+id/username"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
