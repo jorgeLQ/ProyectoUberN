@@ -22,5 +22,12 @@ public class registrar_entregador_view_controler extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+        Button cerrar= (Button) findViewById(R.id.CANCELAR2);
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

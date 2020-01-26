@@ -24,5 +24,15 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+
+        Button cerrar= (Button) findViewById(R.id.CANCELARC);
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 }
