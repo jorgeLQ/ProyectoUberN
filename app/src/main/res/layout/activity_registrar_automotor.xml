@@ -7,46 +7,38 @@
     tools:context=".registrar_automotor">
 
     <Button
-        android:id="@+id/btnFMatricula"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginBottom="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtinfMatricula"
-        app:layout_constraintVertical_bias="1.0"
-        tools:text="SUBIR FOTO" />
-
-    <TextView
-        android:id="@+id/txtinfMatricula"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="34dp"
-        android:text="La foto debe contener toda la información en el documento de registro. Recuerde: - No se aceptan vehículos de alquiler - No se aceptan fotografías de placas"
-        app:layout_constraintBottom_toTopOf="@+id/btnFMatricula"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMatricula" />
-
-    <TextView
-        android:id="@+id/txtMatricula"
+        android:id="@+id/btnRAAceptar2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="1dp"
-        android:text="Sube una foto de la Matrícula del Vehículo"
-        app:layout_constraintBottom_toTopOf="@+id/txtinfMatricula"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="49dp"
+        android:text="Cancelar"
+        app:layout_constraintStart_toEndOf="@+id/btnRAAceptar"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroMatricula" />
+
+    <EditText
+        android:id="@+id/txtNumeroMatricula"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Número de Placa"
+        app:layout_constraintStart_toEndOf="@+id/lbNumeroPlaca"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroChasis" />
+
+    <TextView
+        android:id="@+id/lbNumeroPlaca"
+        android:layout_width="109dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="56dp"
+        android:text="Número de Placa"
+        app:layout_constraintBottom_toTopOf="@+id/btnRAAceptar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFLicencia" />
+        app:layout_constraintTop_toBottomOf="@+id/lbNumeroChasis" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -58,48 +50,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logou" />
 
-    <Button
-        android:id="@+id/btnFLicencia"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtMatricula"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtinfLicencia"
-        tools:text="SUBIR FOTO" />
-
-
-    <TextView
-        android:id="@+id/txtLicencia"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="10dp"
-        android:text="Sube una foto de tu Licencia de Conducir"
-        app:layout_constraintBottom_toTopOf="@+id/txtinfLicencia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <TextView
-        android:id="@+id/txtinfLicencia"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="17dp"
-        android:text="La foto debe contener toda la información en la parte frontal de la licencia. Recuerde que los requisitos son: - Edad mínima: 18 años."
-        app:layout_constraintBottom_toTopOf="@+id/btnFLicencia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLicencia" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -114,5 +64,57 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/lbRegistrarAutomotor"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="261dp"
+        android:text="Registrar Automotor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/lbNumeroChasis"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="27dp"
+        android:text="Número de Chasis"
+        app:layout_constraintBottom_toTopOf="@+id/lbNumeroPlaca"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroChasis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbRegistrarAutomotor" />
+
+    <EditText
+        android:id="@+id/txtNumeroChasis"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Número de Chasis"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroMatricula"
+        app:layout_constraintStart_toEndOf="@+id/lbNumeroChasis"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Button
+        android:id="@+id/btnRAAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="97dp"
+        android:text="Aceptar"
+        app:layout_constraintEnd_toStartOf="@+id/btnRAAceptar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbNumeroPlaca" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
