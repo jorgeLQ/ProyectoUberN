@@ -52,148 +52,60 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Objects;
 
-public class mapas_view_controler extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks {
-
-    private static GoogleApiClient mGoogleApiClient;
-    private static final int ACCESS_FINE_LOCATION_INTENT_ID = 3;
-    private static final String BROADCAST_ACTION = "android.location.PROVIDERS_CHANGED";
+public class mapas_view_controler extends FragmentActivity implements OnMapReadyCallback {
 
     private SupportMapFragment mapFragment;
     private GoogleMap mGoogleMap;
-    private LocationRequest mLocationRequest;
     private boolean stateMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapas_view_controler);
-        checkPermissions();     //Check Permission
-
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        stateMap = false;
-        //Este handler  sirve para dar la ubicacion
-        new Handler().postDelayed(new Runnable() {
-            public void run() {
-                if (!stateMap) {
-                    checkPermissions();     //Check Permission
-                }
-            }
-        }, 10000); //timer
-
     }
 
-    private void checkPermissions() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (ContextCompat.checkSelfPermission(mapas_view_controler.this,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED)
-                requestLocationPermission();
-
-        }
-    }
-
-    private void requestLocationPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(mapas_view_controler.this, android.Manifest.permission.ACCESS_FINE_LOCATION)) {
-            ActivityCompat.requestPermissions(mapas_view_controler.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_INTENT_ID);
-        } else {
-            ActivityCompat.requestPermissions(mapas_view_controler.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_INTENT_ID);
-        }
-    }
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        registerReceiver(gpsLocationReceiver, new IntentFilter(BROADCAST_ACTION));//Registrar el receptor de difusión para comprobar el estado del GPS.
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (gpsLocationReceiver != null)
-            unregisterReceiver(gpsLocationReceiver);
-    }
-
-    /* Receptor de difusión para comprobar el estado del GPS */
-    private BroadcastReceiver gpsLocationReceiver = new BroadcastReceiver() {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            //Si la acción es la ubicación
-            if (intent.getAction().matches(BROADCAST_ACTION)) {
-                LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-                //Compruebe si el GPS está encendido o apagado
-                if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                    Log.e("About GPS", "GPS is Enabled in your device");
-                }
-
-
-            }
-        }
-    };
-
-    /* Método de permiso On Request para verificar si el permiso se ha otorgado o no a Marshmallow Devices */
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        Log.e("TAG", "onRequestPermissionsResult");
-        switch (requestCode) {
-            case ACCESS_FINE_LOCATION_INTENT_ID: {
-                // Si se cancela la solicitud, las matrices de resultados están vacías.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(mapas_view_controler.this, "Location Permission denied.", Toast.LENGTH_SHORT).show();
-                }
-                return;
-            }
-        }
-    }
-    
-    @Override
-    public void onConnected(@Nullable Bundle bundle) {
-        Log.e("TAG", "onConnected");
-        mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(9000);
-        mLocationRequest.setFastestInterval(9000);
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-        try {
-            if (ContextCompat.checkSelfPermission(Objects.requireNonNull(this), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (LocationListener) this);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-        Log.e("TAG", "onConnectionSuspended");
-        mGoogleApiClient.connect(i);
-    }
-
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Log.e("TAG", "onConnectionSuspended");
-    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        Log.e("TAG", "onMapReady");
         mGoogleMap = googleMap;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         mGoogleMap.setMyLocationEnabled(true);
+        mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
+        Pointers(googleMap);
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             } else {
                 Toast.makeText(this, "No cuentas con los permisos necesarios, cierra y abre de nuevo la aplicación", Toast.LENGTH_SHORT).show();
             }
-        } else {
         }
+    }
+
+    public void Pointers(GoogleMap googleMap){
+        mGoogleMap = googleMap;
+        final LatLng punto1= new LatLng(-0.2104022,-78.4888627);
+        final LatLng punto2= new LatLng(-0.2321669,-78.5055793);
+        final LatLng punto3= new LatLng(-0.3005394,-78.4598161);
+        final LatLng punto4= new LatLng(-0.2915984,-78.4008312);
+
+
+        mGoogleMap.addMarker(new MarkerOptions().position(punto1).title("EPN").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto2).title("TREBOL").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto3).title("TRIANGULO").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto4).title("LA MERCED").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+
+
+
+
+
+
     }
 
 
