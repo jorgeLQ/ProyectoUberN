@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <EditText
-        android:id="@+id/editText13"
+        android:id="@+id/nombreentregador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
@@ -107,7 +107,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/editText13" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreentregador" />
 
     <EditText
         android:id="@+id/editText15"
