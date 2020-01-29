@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1025532874863-8rmge4a8b6kb43q0asag4jcfh1r5rja9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ubernavidenio",
+            "certificate_hash": "f55bf62f37308c73bc59a2cb6b7e54cffabef149"
+          }
+        },
+        {
 
           "client_id": "1025532874863-7d6kg9a0lsrgvr5erq16c7j3ncnk1s41.apps.googleusercontent.com",
           "client_type": 1,

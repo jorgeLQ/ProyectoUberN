@@ -6,8 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class registrar_entregador_view_controler extends AppCompatActivity {
+
+EditText txtNombre;
+Button btnregistrar;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +36,15 @@ public class registrar_entregador_view_controler extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        txtNombre=(EditText) findViewById(R.id.nombreentregador);
+
     }
+
+
+
+
+
+
 }
