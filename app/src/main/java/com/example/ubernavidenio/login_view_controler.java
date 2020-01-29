@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class login_view_controler extends AppCompatActivity {
@@ -62,6 +63,8 @@ public class login_view_controler extends AppCompatActivity {
             Toast.makeText(this, "Se debe ingresar una Contraseña", Toast.LENGTH_LONG).show();
             return;
         }
+
+
         mAuth.createUserWithEmailAndPassword(UName, Contrasena)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -69,6 +72,9 @@ public class login_view_controler extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(login_view_controler.this,"Bienvenido a la Aplicación Uber Navideño",Toast.LENGTH_LONG).show();
                         } else {
+                            if(task.getException()instanceof FirebaseAuthUserCollisionException){
+                                Toast.makeText(login_view_controler.this,"El Usuario no Existe",Toast.LENGTH_LONG).show();
+                            }
                             Toast.makeText(login_view_controler.this,"No se encuentra registrado",Toast.LENGTH_LONG).show();
                         }
                     }
