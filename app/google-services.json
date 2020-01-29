@@ -23,6 +23,31 @@
           }
         },
         {
+
+          "client_id": "1025532874863-7d6kg9a0lsrgvr5erq16c7j3ncnk1s41.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ubernavidenio",
+            "certificate_hash": "f3bd1189921e388a6c42b007dc52d80d3cf9d60b"
+          }
+        },
+        {
+          "client_id": "1025532874863-k1babfbmgee0ku3h9o9krebf38elffek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ubernavidenio",
+            "certificate_hash": "3093d48901e7a7f93cd04bfdef68bb0f89a42e18"
+          }
+        },
+        {
+          "client_id": "1025532874863-8rmge4a8b6kb43q0asag4jcfh1r5rja9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ubernavidenio",
+            "certificate_hash": "f55bf62f37308c73bc59a2cb6b7e54cffabef149"
+          }
+        },
+        {
           "client_id": "1025532874863-7d6kg9a0lsrgvr5erq16c7j3ncnk1s41.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -38,35 +63,6 @@
             "certificate_hash": "57a0ca632976b1c568283001efece758c0d7de44"
           }
         },
-        {
-          "client_id": "1025532874863-1gkn7phqvkmc0mfd9sl67plt52pheg5f.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBLx5qlxAS7nyRm-AQxjkhK-hEJ6mI0hmo"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1025532874863-1gkn7phqvkmc0mfd9sl67plt52pheg5f.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1025532874863:android:5fbe60ef71eeb79a1cbd9a",
-        "android_client_info": {
-          "package_name": "com.g1.uber"
-        }
-      },
-      "oauth_client": [
         {
           "client_id": "1025532874863-1gkn7phqvkmc0mfd9sl67plt52pheg5f.apps.googleusercontent.com",
           "client_type": 3
