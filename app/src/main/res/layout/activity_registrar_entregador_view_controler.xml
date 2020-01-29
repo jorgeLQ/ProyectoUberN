@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:text="REGISTRARENTREGADOR"
+        android:text="REGISTRAR ENTREGADOR"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="56dp"
-        android:text="Nombres"
+        android:text="Nombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginTop="26dp"
-        android:text="Apellidos"
+        android:text="Apellido"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -99,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editText14"
+        android:id="@+id/apellidoentregador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreentregador" />
 
     <EditText
-        android:id="@+id/editText15"
+        android:id="@+id/edadentregador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="94dp"
@@ -118,10 +118,10 @@
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/editText14" />
+        app:layout_constraintTop_toBottomOf="@+id/apellidoentregador" />
 
     <EditText
-        android:id="@+id/editText16"
+        android:id="@+id/telefentregador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="71dp"
@@ -129,10 +129,10 @@
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/editText15" />
+        app:layout_constraintTop_toBottomOf="@+id/edadentregador" />
 
     <EditText
-        android:id="@+id/editText17"
+        android:id="@+id/correoentregador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
@@ -140,10 +140,10 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/editText16" />
+        app:layout_constraintTop_toBottomOf="@+id/telefentregador" />
 
     <EditText
-        android:id="@+id/editText18"
+        android:id="@+id/cuentaahorro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -151,7 +151,7 @@
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/editText17" />
+        app:layout_constraintTop_toBottomOf="@+id/correoentregador" />
 
     <TextView
         android:id="@+id/textView24"
@@ -164,7 +164,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <EditText
-        android:id="@+id/editText20"
+        android:id="@+id/contraentregador1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -172,7 +172,7 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintTop_toBottomOf="@+id/cuentaahorro" />
 
     <Button
         android:id="@+id/BtnRegistar"
@@ -182,7 +182,7 @@
         android:layout_marginTop="92dp"
         android:text="Registrar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText20" />
+        app:layout_constraintTop_toBottomOf="@+id/contraentregador1" />
 
     <Button
         android:id="@+id/CANCELAR2"
@@ -192,7 +192,7 @@
         android:layout_marginTop="92dp"
         android:text="Cancelar"
         app:layout_constraintStart_toEndOf="@+id/BtnRegistar"
-        app:layout_constraintTop_toBottomOf="@+id/editText20" />
+        app:layout_constraintTop_toBottomOf="@+id/contraentregador1" />
 
     <TextView
         android:id="@+id/textView26"
@@ -205,7 +205,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText19"
+        android:id="@+id/contraentregador2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="26dp"
