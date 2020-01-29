@@ -21,9 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 
-import com.google.firebase.database.DatabaseReference;
 
-import com.google.firebase.database.FirebaseDatabase;
 
 public class ventana_entregador_view_controler extends AppCompatActivity {
 
