@@ -4,15 +4,62 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
+
+    private EditText TxtUserNamecl;
+    private EditText TxtContrasenacl;
+    private EditText TxtCContrasenacl;
+    private EditText TxtNombrecl;
+    private EditText TxtApellidocl;
+    private EditText TxtEmailcl;
+    private EditText TxtNCBancariacl;
+    private RadioButton Masculinocl;
+    private RadioButton Femeninocl;
+    private EditText TxtFNacimientocl;
+    private EditText TxtDireccioncl;
+    private Button REGISTRARC;
+    private Button CANCELARC;
+
+
+    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_cliente_view_controler);
+
+
+        mAuth = FirebaseAuth.getInstance();
+
+        TxtUserNamecl=(EditText)findViewById(R.id.TxtUserNamecl);
+        TxtContrasenacl=(EditText)findViewById(R.id.TxtContrasenacl);
+        TxtCContrasenacl=(EditText)findViewById(R.id.TxtCContrasenacl);
+        TxtNombrecl=(EditText)findViewById(R.id.TxtNombrecl);
+        TxtApellidocl=(EditText)findViewById(R.id.TxtApellidocl);
+        TxtEmailcl=(EditText)findViewById(R.id.TxtEmailcl);
+        TxtNCBancariacl=(EditText)findViewById(R.id.TxtNCBancariacl);
+        Masculinocl=(RadioButton)findViewById(R.id.Masculino);
+        Femeninocl=(RadioButton)findViewById(R.id.Femenino);
+        TxtFNacimientocl=(EditText)findViewById(R.id.TxtFNacimientocl);
+        TxtDireccioncl=(EditText)findViewById(R.id.TxtDireccioncl);
+
+
+        REGISTRARC=(Button) findViewById(R.id.REGISTRARC);
+        CANCELARC=(Button)findViewById(R.id.CANCELARC);
+
+
+        REGISTRARC.setOnClickListener((View.OnClickListener) this);
+        CANCELARC.setOnClickListener((View.OnClickListener) this);
 
 
         Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
@@ -33,6 +80,69 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+    private void registrarUsuarioCl(){
+        String UNamecl=TxtUserNamecl.getText().toString().trim();
+        String Contrasenacl=TxtContrasenacl.getText().toString().trim();
+        String CContrasenacl=TxtCContrasenacl.getText().toString().trim();
+        String Nombrecl=TxtNombrecl.getText().toString().trim();
+        String Apellidocl=TxtApellidocl.getText().toString().trim();
+        String Emailcl=TxtEmailcl.getText().toString().trim();
+        String CBancariacl=TxtNCBancariacl.getText().toString().trim();
+        String FNacimientocl=TxtFNacimientocl.getText().toString().trim();
+        String Direccioncl=TxtDireccioncl.getText().toString().trim();
+
+        if(TextUtils.isEmpty(UNamecl)){
+            Toast.makeText(this,"Se debe ingresar un Usuario",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Contrasenacl)){
+            Toast.makeText(this,"Se debe ingresar una Contraseña",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(CContrasenacl)){
+            Toast.makeText(this,"Se debe Repetir la Contraseña",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(Contrasenacl.equals(CContrasenacl)){
+            Toast.makeText(this,"Las contraseñas Coiciden",Toast.LENGTH_LONG).show();
+            return;
+        }else{
+            Toast.makeText(this,"Las contraseñas No son Iguales",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Nombrecl)){
+            Toast.makeText(this,"Se debe Ingresar un Nombre",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Apellidocl)){
+            Toast.makeText(this,"Se debe Ingresar un Apellido",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Emailcl)){
+            Toast.makeText(this,"Se debe Ingresar un Correo Electronico",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(CBancariacl)){
+            Toast.makeText(this,"Se debe Ingresar una Cuenta Bancaria",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(Masculinocl.isChecked()==true){
+            String Sexo="Masculino";
+        }else{
+            if(Femeninocl.isChecked()==true){
+                String Sexo="Femenino";
+            }
+        }
+        if(TextUtils.isEmpty(FNacimientocl)){
+            Toast.makeText(this,"Se debe Ingresar una Fecha de Nacimiento",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Direccioncl)){
+            Toast.makeText(this,"Se debe Ingresar una Dirección",Toast.LENGTH_LONG).show();
+            return;
+        }
 
     }
 }
