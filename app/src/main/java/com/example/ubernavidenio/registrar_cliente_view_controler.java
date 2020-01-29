@@ -112,37 +112,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
             Toast.makeText(this,"Las contraseñas No son Iguales",Toast.LENGTH_LONG).show();
             return;
         }
-        if(TextUtils.isEmpty(Nombrecl)){
-            Toast.makeText(this,"Se debe Ingresar un Nombre",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(TextUtils.isEmpty(Apellidocl)){
-            Toast.makeText(this,"Se debe Ingresar un Apellido",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(TextUtils.isEmpty(Emailcl)){
-            Toast.makeText(this,"Se debe Ingresar un Correo Electronico",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(TextUtils.isEmpty(CBancariacl)){
-            Toast.makeText(this,"Se debe Ingresar una Cuenta Bancaria",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(Masculinocl.isChecked()==true){
-            String Sexo="Masculino";
-        }else{
-            if(Femeninocl.isChecked()==true){
-                String Sexo="Femenino";
-            }
-        }
-        if(TextUtils.isEmpty(FNacimientocl)){
-            Toast.makeText(this,"Se debe Ingresar una Fecha de Nacimiento",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(TextUtils.isEmpty(Direccioncl)){
-            Toast.makeText(this,"Se debe Ingresar una Dirección",Toast.LENGTH_LONG).show();
-            return;
-        }
+
+
 
     }
 }
