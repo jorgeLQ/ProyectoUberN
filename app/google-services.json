@@ -15,7 +15,16 @@
       },
       "oauth_client": [
         {
-          "client_id": "1025532874863-i97o2c10irpimqnu605ctdtvmums8kh5.apps.googleusercontent.com",
+
+          "client_id": "1025532874863-7d6kg9a0lsrgvr5erq16c7j3ncnk1s41.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ubernavidenio",
+            "certificate_hash": "f3bd1189921e388a6c42b007dc52d80d3cf9d60b"
+          }
+        },
+        {
+          "client_id": "1025532874863-k1babfbmgee0ku3h9o9krebf38elffek.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.ubernavidenio",
