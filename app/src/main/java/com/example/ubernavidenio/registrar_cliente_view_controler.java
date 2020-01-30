@@ -1,7 +1,5 @@
 package com.example.ubernavidenio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -58,8 +58,6 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         CANCELARC=(Button)findViewById(R.id.CANCELARC);
 
 
-        REGISTRARC.setOnClickListener((View.OnClickListener) this);
-        CANCELARC.setOnClickListener((View.OnClickListener) this);
 
 
         Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
