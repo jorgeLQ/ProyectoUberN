@@ -65,7 +65,7 @@ public class login_view_controler extends AppCompatActivity implements View.OnCl
         }
 
 
-        progressDialog.setMessage("Realizando consulta en linea...");
+        progressDialog.setMessage("Verificando...");
         progressDialog.show();
 
         //loguear usuario
