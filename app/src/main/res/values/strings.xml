@@ -29,4 +29,11 @@
     <string name="title_activity_ventana_entregador_view_controler">
         ventana_entregador_view_controler
     </string>
+    <string name="title_activity_menu__ropa">Menu_Ropa</string>
+    <string name="tab_text_1R">Masculino</string>
+    <string name="tab_text_2R">Femenino</string>
+    <string name="tab_text_3R">Unisex</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
