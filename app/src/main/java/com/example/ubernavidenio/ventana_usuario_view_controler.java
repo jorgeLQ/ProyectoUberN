@@ -1,29 +1,21 @@
 package com.example.ubernavidenio;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-
-import com.example.ubernavidenio.fragments.MasculinoFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-import android.widget.Button;
+import com.google.android.material.snackbar.Snackbar;
 
 public class ventana_usuario_view_controler extends AppCompatActivity {
 
@@ -86,7 +78,7 @@ public class ventana_usuario_view_controler extends AppCompatActivity {
                 menus=new Intent(ventana_usuario_view_controler.this,Menu_Ropa.class);
                 break;
             case R.id.imageView22:
-                menus=new Intent(ventana_usuario_view_controler.this,Menu_Tegnologia.class);
+                menus=new Intent();
                 break;
             case R.id.imageView23:
                 menus=new Intent();

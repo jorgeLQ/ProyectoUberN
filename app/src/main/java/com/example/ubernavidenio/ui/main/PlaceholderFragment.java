@@ -52,15 +52,16 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View menuR = inflater.inflate(R.layout.fragment_menu__ropa, container, false);
-        final TextView textView = menuR.findViewById(R.id.section_label);
-        pageViewModel.getText().observe(this, new Observer<String>() {
+        View root = inflater.inflate(R.layout.fragment_menu__ropa, container, false);
+        final TextView textView = root.findViewById(R.id.section_label);
+        pageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
-        return menuR;
+        return root;
     }
+
 
 }
