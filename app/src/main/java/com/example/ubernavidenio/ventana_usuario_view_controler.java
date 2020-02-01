@@ -1,8 +1,10 @@
 package com.example.ubernavidenio;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.ubernavidenio.fragments.MasculinoFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -74,4 +76,30 @@ public class ventana_usuario_view_controler extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void onClick(View view){
+
+        Intent menus=null;
+
+        switch (view.getId()){
+            case R.id.imageView21:
+                menus=new Intent(ventana_usuario_view_controler.this,Menu_Ropa.class);
+                break;
+            case R.id.imageView22:
+                menus=new Intent(ventana_usuario_view_controler.this,Menu_Tegnologia.class);
+                break;
+            case R.id.imageView23:
+                menus=new Intent();
+                break;
+            case R.id.imageView24:
+                menus=new Intent();
+                break;
+            case R.id.imageView25:
+                menus=new Intent();
+                break;
+        }
+        startActivity(menus);
+    }
+
+
 }
