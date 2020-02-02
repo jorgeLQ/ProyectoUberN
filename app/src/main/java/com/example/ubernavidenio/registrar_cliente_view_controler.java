@@ -150,40 +150,31 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     }
     private void registrarUsuarioCl(){
 
-        /*
-        String UNamecl=TxtUserNamecl.getText().toString().trim();
-        String Contrasenacl=TxtContrasenacl.getText().toString().trim();
-        String CContrasenacl=TxtCContrasenacl.getText().toString().trim();
-        String Nombrecl=TxtNombrecl.getText().toString().trim();
-        String Apellidocl=TxtApellidocl.getText().toString().trim();
-        String Emailcl=TxtEmailcl.getText().toString().trim();
-        String CBancariacl=TxtNCBancariacl.getText().toString().trim();
-        String FNacimientocl=TxtFNacimientocl.getText().toString().trim();
-        String Direccioncl=TxtDireccioncl.getText().toString().trim();
+        userCli = TxtUserNamecl.getText().toString();
+        contrase = TxtContrasenacl.getText().toString();
+        ccontrase = TxtCContrasenacl.getText().toString();
+        nameCli = TxtNombrecl.getText().toString();
+        apecli = TxtApellidocl.getText().toString();
+        mail = TxtEmailcl.getText().toString();
+        cuenta = TxtNCBancariacl.getText().toString();
+        fechana = TxtFNacimientocl.getText().toString();
+        direccion = TxtDireccioncl.getText().toString();
 
-        if(TextUtils.isEmpty(UNamecl)){
-            Toast.makeText(this,"Se debe ingresar un Usuario",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(TextUtils.isEmpty(Contrasenacl)){
-            Toast.makeText(this,"Se debe ingresar una Contraseña",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(TextUtils.isEmpty(CContrasenacl)){
-            Toast.makeText(this,"Se debe Repetir la Contraseña",Toast.LENGTH_LONG).show();
-            return;
-        }
-        if(Contrasenacl.equals(CContrasenacl)){
-            Toast.makeText(this,"Las contraseñas Coiciden",Toast.LENGTH_LONG).show();
-            return;
-        }else{
-            Toast.makeText(this,"Las contraseñas No son Iguales",Toast.LENGTH_LONG).show();
-            return;
-        }
 
-        */
 
-        //mAuth.createUserWithEmailAndPassword(mail, contrase).addOnCanceledListener(new OnCompleteListener)
+
+        if(!TextUtils.isEmpty(contrasenia1)){
+
+            String id= Rentregador.push().getKey();
+            Rentregador entregador = new Rentregador(id, nombre, apellido, edad, telefono, correo, ctaahorro, contrasenia1, contrasenia2);
+            Rentregador.child("Entregadores").child(id).setValue(entregador);
+            Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
+
+        } else {
+
+            Toast.makeText(this, "Debe introducir la contraseña", Toast.LENGTH_LONG).show();
+
+        }
 
 
     }
