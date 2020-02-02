@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="23dp"
-        android:text="@string/confirmar_contrase_a"
+        android:text="Confimar Contraseña"
         app:layout_constraintEnd_toStartOf="@+id/TxtCContrasenacl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -26,7 +26,7 @@
         android:layout_marginTop="23dp"
         android:layout_marginEnd="82dp"
         android:layout_marginBottom="25dp"
-        android:text="@string/user_name"
+        android:text="user_name"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toStartOf="@+id/TxtUserNamecl"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:text="@string/registro_de_usuario"
+        android:text="Registro de Usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -59,7 +59,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="102dp"
-        android:text="@string/nombre"
+        android:text="Nombre"
         app:layout_constraintEnd_toStartOf="@+id/TxtNombrecl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -71,7 +71,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="111dp"
-        android:text="@string/correo"
+        android:text="Correo"
         app:layout_constraintEnd_toStartOf="@+id/TxtEmailcl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -83,7 +83,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="101dp"
-        android:text="@string/apellido"
+        android:text="Apellido"
         app:layout_constraintEnd_toStartOf="@+id/TxtApellidocl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -95,7 +95,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="79dp"
-        android:text="@string/contrase_a"
+        android:text="Contraseña"
         app:layout_constraintEnd_toStartOf="@+id/TxtContrasenacl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="24dp"
-        android:text="@string/numero_cuenta_bancaria"
+        android:text="Numero_cuenta_bancaria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -116,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="40dp"
-        android:text="@string/sexo"
+        android:text="Sexo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -127,7 +127,7 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="44dp"
-        android:text="@string/fecha_nacimiento"
+        android:text="Fecha_nacimiento"
         app:layout_constraintEnd_toStartOf="@+id/TxtFNacimientocl"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +140,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="99dp"
-        android:text="@string/direccion"
+        android:text="Direccion"
         app:layout_constraintEnd_toStartOf="@+id/TxtDireccioncl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -149,7 +149,7 @@
         android:id="@+id/REGISTRARC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/registrar"
+        android:text="registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/CANCELARC"
         app:layout_constraintHorizontal_bias="0.367"
@@ -164,7 +164,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="82dp"
         android:layout_marginBottom="26dp"
-        android:text="@string/cancelar"
+        android:text="cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -299,13 +299,13 @@
             android:id="@+id/rb_femenino"
             android:layout_width="wrap_content"
             android:layout_height="28dp"
-            android:text="@string/femenino" />
+            android:text="Femenino" />
 
         <RadioButton
             android:id="@+id/rb_masculino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/masculino" />
+            android:text="Masculino" />
     </RadioGroup>
 
 
