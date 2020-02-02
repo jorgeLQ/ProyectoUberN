@@ -33,7 +33,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private Button CANCELARC;
 
 
-     FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     //Variable de datos que van a ser registrados
 
