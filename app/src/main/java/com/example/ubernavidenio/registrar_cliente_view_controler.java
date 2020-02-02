@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,13 +26,13 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private EditText TxtApellidocl;
     private EditText TxtEmailcl;
     private EditText TxtNCBancariacl;
-    
-    private RadioButton Masculinocl;
-    private RadioButton Femeninocl;
+
+    private RadioGroup mGender;
+    private RadioButton mGenderOption;
     private EditText TxtFNacimientocl;
     private EditText TxtDireccioncl;
 
-
+    String strGender;
      Button REGISTRARC;
      Button CANCELARC;
 
@@ -79,8 +80,26 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         TxtEmailcl = (EditText) findViewById(R.id.TxtEmailcl);
         TxtNCBancariacl = (EditText) findViewById(R.id.TxtNCBancariacl);
 
-        Masculinocl = (RadioButton) findViewById(R.id.Masculinocl);
-        Femeninocl = (RadioButton) findViewById(R.id.Femeninocl);
+         mGender = findViewById(R.id.rg_gender);
+         mGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+             @Override
+             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                 mGenderOption = mGender.findViewById(checkedId);
+
+                 switch (checkedId){
+                     case R.id.rb_femenino:
+                        strGender = mGenderOption.getText().toString();
+                        break;
+                     case R.id.rb_masculino:
+                         strGender = mGenderOption.getText().toString();
+                        break;
+                     default:
+
+                 }
+             }
+         });
+
+
 
         TxtFNacimientocl = findViewById(R.id.TxtFNacimientocl);
         TxtDireccioncl = findViewById(R.id.TxtDireccioncl);
@@ -114,7 +133,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         });
 
 
-
+        //Validacion cuando los campos estan vacios
 
         /*REGISTRARC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +189,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         String FNacimientocl=TxtFNacimientocl.getText().toString().trim();
         String Direccioncl=TxtDireccioncl.getText().toString().trim();
 
-        String M = Masculinocl.getText().toString().trim();
+        String sexo = mGenderOption.getText().toString().trim();
 
 
         if(!TextUtils.isEmpty(Contrasenacl)){
@@ -179,7 +198,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-            Rcliente rcliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, M , FNacimientocl,Direccioncl);
+            Rcliente rcliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccioncl);
 
             Rcliente.child("Clientes").child(id).setValue(Rcliente);
             Toast.makeText(this, "Cliente Registrado", Toast.LENGTH_LONG).show();

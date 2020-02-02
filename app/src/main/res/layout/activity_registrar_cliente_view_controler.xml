@@ -275,26 +275,26 @@
         app:layout_constraintTop_toBottomOf="@+id/TxtFNacimientocl" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rg_gender"
         android:layout_width="194dp"
         android:layout_height="29dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/TxtFNacimientocl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.872"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtNCBancariacl"
         app:layout_constraintVertical_bias="0.717">
 
 
         <RadioButton
-            android:id="@+id/Femeninocl"
+            android:id="@+id/rb_femenino"
             android:layout_width="wrap_content"
             android:layout_height="28dp"
             android:text="Femenino" />
 
         <RadioButton
-            android:id="@+id/Masculinocl"
+            android:id="@+id/rb_masculino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Masculino" />

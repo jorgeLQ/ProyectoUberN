@@ -2,9 +2,10 @@ package com.example.ubernavidenio;
 
 public class Rcliente {
 
-    String idcleinte, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, M , FNacimientocl,Direccionclid;
+    String idcleinte, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccionclid;
 
-    public Rcliente(String idcleinte, String UNamecl, String contrasenacl, String CContrasenacl, String nombrecl, String apellidocl, String emailcl, String CBancariacl, String m, String FNacimientocl, String direccionclid) {
+
+    public Rcliente(String idcleinte, String UNamecl, String contrasenacl, String CContrasenacl, String nombrecl, String apellidocl, String emailcl, String CBancariacl, String sexo, String FNacimientocl, String direccionclid) {
         this.idcleinte = idcleinte;
         this.UNamecl = UNamecl;
         this.Contrasenacl = contrasenacl;
@@ -13,7 +14,7 @@ public class Rcliente {
         this.Apellidocl = apellidocl;
         this.Emailcl = emailcl;
         this.CBancariacl = CBancariacl;
-        M = m;
+        this.sexo = sexo;
         this.FNacimientocl = FNacimientocl;
         this.Direccionclid = direccionclid;
     }
@@ -50,8 +51,8 @@ public class Rcliente {
         return CBancariacl;
     }
 
-    public String getM() {
-        return M;
+    public String getSexo() {
+        return sexo;
     }
 
     public String getFNacimientocl() {
