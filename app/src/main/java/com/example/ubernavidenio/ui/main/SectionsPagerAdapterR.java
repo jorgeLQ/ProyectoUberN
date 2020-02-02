@@ -14,13 +14,13 @@ import com.example.ubernavidenio.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class SectionsPagerAdapterR extends FragmentPagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1R, R.string.tab_text_2R,R.string.tab_text_3R};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapterR(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -37,6 +37,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return mContext.getResources().getString(TAB_TITLES[position]);
     }
+
 
     @Override
     public int getCount() {

@@ -24,7 +24,7 @@ public class PlaceholderFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PageViewModel pageViewModel;
+    private PageViewModelR pageViewModelR;
 
     public static Fragment newInstance(int index) {
         Fragment fragment=null;
@@ -40,12 +40,12 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = ViewModelProviders.of(this).get(PageViewModel.class);
+        pageViewModelR = ViewModelProviders.of(this).get(PageViewModelR.class);
         int index = 1;
         if (getArguments() != null) {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
-        pageViewModel.setIndex(index);
+        pageViewModelR.setIndex(index);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class PlaceholderFragment extends Fragment {
             Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_menu__ropa, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
-        pageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        pageViewModelR.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
