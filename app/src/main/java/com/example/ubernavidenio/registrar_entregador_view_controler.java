@@ -61,6 +61,8 @@ public class registrar_entregador_view_controler extends AppCompatActivity {
 
 
 
+
+
     }
 
      public void registrarEntregador(){
@@ -75,19 +77,20 @@ public class registrar_entregador_view_controler extends AppCompatActivity {
         String contrasenia2=txtcontra2.getText().toString();
 
 
-         if(!TextUtils.isEmpty(nombre)){
 
-         String id= Rentregador.push().getKey();
-         Rentregador entregador = new Rentregador(id, nombre, apellido, edad, telefono, correo, ctaahorro, contrasenia1, contrasenia2);
-         Rentregador.child("Entregadores").child(id).setValue(entregador);
-         Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
+
+         if(!TextUtils.isEmpty(contrasenia1)){
+
+             String id= Rentregador.push().getKey();
+             Rentregador entregador = new Rentregador(id, nombre, apellido, edad, telefono, correo, ctaahorro, contrasenia1, contrasenia2);
+             Rentregador.child("Entregadores").child(id).setValue(entregador);
+             Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
 
          } else {
 
-             Toast.makeText(this, "Debe introducir el nombre", Toast.LENGTH_LONG).show();
+             Toast.makeText(this, "Debe introducir la contraseña", Toast.LENGTH_LONG).show();
 
          }
-
 
 
      }
