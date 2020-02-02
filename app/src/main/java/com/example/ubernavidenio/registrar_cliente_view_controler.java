@@ -26,11 +26,20 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private RadioButton Femeninocl;
     private EditText TxtFNacimientocl;
     private EditText TxtDireccioncl;
+
+
     private Button REGISTRARC;
     private Button CANCELARC;
 
 
     private FirebaseAuth mAuth;
+
+    //Variable de datos que van a ser registrados 
+
+    private String nameCli="";
+
+
+
 
 
     @Override
@@ -41,36 +50,53 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        TxtUserNamecl=(EditText)findViewById(R.id.TxtUserNamecl);
-        TxtContrasenacl=(EditText)findViewById(R.id.TxtContrasenacl);
-        TxtCContrasenacl=(EditText)findViewById(R.id.TxtCContrasenacl);
-        TxtNombrecl=(EditText)findViewById(R.id.TxtNombrecl);
-        TxtApellidocl=(EditText)findViewById(R.id.TxtApellidocl);
-        TxtEmailcl=(EditText)findViewById(R.id.TxtEmailcl);
-        TxtNCBancariacl=(EditText)findViewById(R.id.TxtNCBancariacl);
-        Masculinocl=(RadioButton)findViewById(R.id.Masculino);
-        Femeninocl=(RadioButton)findViewById(R.id.Femenino);
-        TxtFNacimientocl=(EditText)findViewById(R.id.TxtFNacimientocl);
-        TxtDireccioncl=(EditText)findViewById(R.id.TxtDireccioncl);
+
+        TxtUserNamecl = (EditText) findViewById(R.id.TxtUserNamecl);
+        TxtContrasenacl = (EditText) findViewById(R.id.TxtContrasenacl);
+        TxtCContrasenacl = (EditText) findViewById(R.id.TxtCContrasenacl);
+        TxtNombrecl = (EditText) findViewById(R.id.TxtNombrecl);
+        TxtApellidocl = (EditText) findViewById(R.id.TxtApellidocl);
+        TxtEmailcl = (EditText) findViewById(R.id.TxtEmailcl);
+        TxtNCBancariacl = (EditText) findViewById(R.id.TxtNCBancariacl);
+        Masculinocl = (RadioButton) findViewById(R.id.Masculino);
+        Femeninocl = (RadioButton) findViewById(R.id.Femenino);
+        TxtFNacimientocl = (EditText) findViewById(R.id.TxtFNacimientocl);
+        TxtDireccioncl = (EditText) findViewById(R.id.TxtDireccioncl);
 
 
-        REGISTRARC=(Button) findViewById(R.id.REGISTRARC);
-        CANCELARC=(Button)findViewById(R.id.CANCELARC);
+        REGISTRARC = (Button) findViewById(R.id.REGISTRARC);
+        CANCELARC = (Button) findViewById(R.id.CANCELARC);
 
 
 
 
+
+        REGISTRARC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+        /*
         Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
         btnRegTarjet.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), registrar_targeta_view_controler.class);
+                Intent intent = new Intent(v.getContext(), registrar_targeta_view_controler.class);
                 startActivityForResult(intent, 0);
             }
         });
 
+        */
 
+
+
+
+        /*
         Button cerrar= (Button) findViewById(R.id.CANCELARC);
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +104,9 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 finish();
             }
         });
+        */
+
+
 
     }
     private void registrarUsuarioCl(){
