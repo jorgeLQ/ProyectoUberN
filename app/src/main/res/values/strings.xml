@@ -29,4 +29,20 @@
     <string name="title_activity_ventana_entregador_view_controler">
         ventana_entregador_view_controler
     </string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña:</string>
+    <string name="user_name">User Name:</string>
+    <string name="registro_de_usuario">REGISTRO DE USUARIO</string>
+    <string name="nombre">Nombre:</string>
+    <string name="correo">Correo:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="contrase_a">Contraseña:</string>
+    <string name="numero_cuenta_bancaria">Numero Cuenta Bancaria:</string>
+    <string name="sexo">Sexo:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="fecha_nacimiento">Fecha Nacimiento:</string>
+    <string name="todo">TODO</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
 </resources>

@@ -166,15 +166,9 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
 
-
-
-
             }
 
         });*/
-
-
-
 
 
     }
@@ -198,7 +192,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-            Rcliente rcliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccioncl);
+            Rcliente Rclientes = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccioncl);
 
             Rcliente.child("Clientes").child(id).setValue(Rcliente);
             Toast.makeText(this, "Cliente Registrado", Toast.LENGTH_LONG).show();
