@@ -1,9 +1,6 @@
 package com.example.ubernavidenio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-//import android.content.Intent;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,7 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-//import com.google.android.gms.tasks.OnCompleteListener;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
@@ -24,7 +22,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private EditText TxtApellidocl;
     private EditText TxtEmailcl;
     private EditText TxtNCBancariacl;
-    private RadioButton Masculino, Femenino;
+    private RadioButton Masculinocl;
+    private RadioButton Femeninocl;
     private EditText TxtFNacimientocl;
     private EditText TxtDireccioncl;
 
@@ -66,8 +65,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         TxtApellidocl = (EditText) findViewById(R.id.TxtApellidocl);
         TxtEmailcl = (EditText) findViewById(R.id.TxtEmailcl);
         TxtNCBancariacl = (EditText) findViewById(R.id.TxtNCBancariacl);
-        Masculino = (RadioButton) findViewById(R.id.Masculino);
-        Femenino = (RadioButton) findViewById(R.id.Femenino);
+        Masculinocl = (RadioButton) findViewById(R.id.Masculino);
+        Femeninocl = (RadioButton) findViewById(R.id.Femenino);
         TxtFNacimientocl = (EditText) findViewById(R.id.TxtFNacimientocl);
         TxtDireccioncl = (EditText) findViewById(R.id.TxtDireccioncl);
 
@@ -75,9 +74,10 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         REGISTRARC = (Button) findViewById(R.id.REGISTRARC);
         CANCELARC = (Button) findViewById(R.id.CANCELARC);
 
-
         REGISTRARC.setOnClickListener((View.OnClickListener) this);
         CANCELARC.setOnClickListener((View.OnClickListener) this);
+
+
 
 
 
@@ -97,8 +97,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
                 if (!userCli.isEmpty() && !contrase.isEmpty() && !ccontrase.isEmpty() && !nameCli.isEmpty()
-                    && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty()
-                        && !direccion.isEmpty()){
+                        && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty() && !direccion.isEmpty()){
 
                     if(contrase.length()>=6){
                     }
@@ -106,14 +105,12 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                         Toast.makeText(registrar_cliente_view_controler.this, "La contraseña debe tener almenos 6 caracteres",
                                 Toast.LENGTH_SHORT).show();
                     }
-                   // registrarUsuarioCl();
+                    // registrarUsuarioCl();
                 }
                 else{
                     Toast.makeText(registrar_cliente_view_controler.this, "Debe completar todos los campos",
                             Toast.LENGTH_SHORT).show();
                 }
-
-
 
             }
 
@@ -137,32 +134,29 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-
-        CANCELARC = (Button) findViewById(R.id.CANCELARC);
-        CANCELARC.setOnClickListener(new View.OnClickListener() {
+        /*
+        Button cerrar= (Button) findViewById(R.id.CANCELARC);
+        cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
+        */
 
 
 
     }
     private void registrarUsuarioCl(){
-
-        userCli = TxtUserNamecl.getText().toString();
-        contrase = TxtContrasenacl.getText().toString();
-        ccontrase = TxtCContrasenacl.getText().toString();
-        nameCli = TxtNombrecl.getText().toString();
-        apecli = TxtApellidocl.getText().toString();
-        mail = TxtEmailcl.getText().toString();
-        cuenta = TxtNCBancariacl.getText().toString();
-        fechana = TxtFNacimientocl.getText().toString();
-        direccion = TxtDireccioncl.getText().toString();
-
-
+        String UNamecl=TxtUserNamecl.getText().toString().trim();
+        String Contrasenacl=TxtContrasenacl.getText().toString().trim();
+        String CContrasenacl=TxtCContrasenacl.getText().toString().trim();
+        String Nombrecl=TxtNombrecl.getText().toString().trim();
+        String Apellidocl=TxtApellidocl.getText().toString().trim();
+        String Emailcl=TxtEmailcl.getText().toString().trim();
+        String CBancariacl=TxtNCBancariacl.getText().toString().trim();
+        String FNacimientocl=TxtFNacimientocl.getText().toString().trim();
+        String Direccioncl=TxtDireccioncl.getText().toString().trim();
 
 
 
