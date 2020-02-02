@@ -36,12 +36,12 @@
         android:id="@+id/imageView5"
         android:layout_width="430dp"
         android:layout_height="143dp"
+        android:contentDescription="todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logou"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/logou" />
 
     <TextView
         android:id="@+id/textView7"
