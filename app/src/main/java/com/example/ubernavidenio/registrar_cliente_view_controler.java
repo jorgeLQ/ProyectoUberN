@@ -85,15 +85,30 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
             public void onClick(View v) {
                 userCli = TxtUserNamecl.getText().toString();
                 contrase = TxtContrasenacl.getText().toString();
-                ccontrase = TxtCContrasenacl.getText().toString()
+                ccontrase = TxtCContrasenacl.getText().toString();
                 nameCli = TxtNombrecl.getText().toString();
                 apecli = TxtApellidocl.getText().toString();
                 mail = TxtEmailcl.getText().toString();
                 cuenta = TxtNCBancariacl.getText().toString();
                 fechana = TxtFNacimientocl.getText().toString();
                 direccion = TxtDireccioncl.getText().toString();
+
+
+                if (!userCli.isEmpty() && !contrase.isEmpty() && !ccontrase.isEmpty() && !nameCli.isEmpty()
+                    && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty() && !direccion.isEmpty()){
+
+                    
+                   // registrarUsuarioCl();
+                }
+                else{
+                    Toast.makeText(registrar_cliente_view_controler.this, "Debe completar todos los campos",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+
+
             }
-        
+
         });
 
 
