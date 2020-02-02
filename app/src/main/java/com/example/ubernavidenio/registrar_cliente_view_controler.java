@@ -25,6 +25,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private EditText TxtApellidocl;
     private EditText TxtEmailcl;
     private EditText TxtNCBancariacl;
+    
     private RadioButton Masculinocl;
     private RadioButton Femeninocl;
     private EditText TxtFNacimientocl;
@@ -77,10 +78,13 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         TxtApellidocl = (EditText) findViewById(R.id.TxtApellidocl);
         TxtEmailcl = (EditText) findViewById(R.id.TxtEmailcl);
         TxtNCBancariacl = (EditText) findViewById(R.id.TxtNCBancariacl);
-        Masculinocl = (RadioButton) findViewById(R.id.Masculino);
-        Femeninocl = (RadioButton) findViewById(R.id.Femenino);
-        TxtFNacimientocl = (EditText) findViewById(R.id.TxtFNacimientocl);
-        TxtDireccioncl = (EditText) findViewById(R.id.TxtDireccioncl);
+
+        Masculinocl = (RadioButton) findViewById(R.id.Masculinocl);
+        Femeninocl = (RadioButton) findViewById(R.id.Femeninocl);
+
+        TxtFNacimientocl = findViewById(R.id.TxtFNacimientocl);
+        TxtDireccioncl = findViewById(R.id.TxtDireccioncl);
+
 
 
         REGISTRARC = (Button) findViewById(R.id.REGISTRARC);
@@ -89,6 +93,13 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         REGISTRARC.setOnClickListener((View.OnClickListener) this);
         CANCELARC.setOnClickListener((View.OnClickListener) this);
 
+
+        //radio button
+
+
+
+
+        //tarjeta
 
 
         Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
@@ -101,6 +112,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
 
 
 
@@ -141,26 +153,6 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
             }
 
         });*/
-
-
-
-        /*
-        Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
-        btnRegTarjet.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), registrar_targeta_view_controler.class);
-                startActivityForResult(intent, 0);
-            }
-        });
-
-        */
-
-
-
-
-
 
 
 
