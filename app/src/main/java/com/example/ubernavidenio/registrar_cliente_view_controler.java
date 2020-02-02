@@ -186,12 +186,13 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
             String id=Rcliente.push().getKey();
 
 
-            /*
+
             Rcliente rcliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, M , FNacimientocl,Direccioncl);
+
             Rcliente.child("Clientes").child(id).setValue(Rcliente);
             Toast.makeText(this, "Cliente Registrado", Toast.LENGTH_LONG).show();
 
-            */
+
 
         } else {
 
