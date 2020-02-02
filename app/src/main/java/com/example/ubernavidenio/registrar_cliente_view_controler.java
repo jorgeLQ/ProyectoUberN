@@ -79,6 +79,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                     case R.id.rb_masculino:
                         strGender = mGenderOption.getText().toString();
                         break;
+
                     default:
 
                 }
@@ -178,9 +179,9 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-            Rcliente Rclientes = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccioncl);
+            Rcliente cliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccioncl);
 
-            Rcliente.child("Clientes").child(id).setValue(Rcliente);
+            Rcliente.child("Clientes").child(id).setValue(cliente);
             Toast.makeText(this, "Cliente Registrado", Toast.LENGTH_LONG).show();
 
 
