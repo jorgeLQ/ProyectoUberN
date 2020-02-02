@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
@@ -32,7 +33,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private Button CANCELARC;
 
 
-    private FirebaseAuth mAuth;
+     FirebaseAuth mAuth;
 
     //Variable de datos que van a ser registrados
 
@@ -97,7 +98,12 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 if (!userCli.isEmpty() && !contrase.isEmpty() && !ccontrase.isEmpty() && !nameCli.isEmpty()
                     && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty() && !direccion.isEmpty()){
 
-                    
+                    if(contrase.length()>=6){
+                    }
+                    else{
+                        Toast.makeText(registrar_cliente_view_controler.this, "La contraseña debe tener almenos 6 caracteres",
+                                Toast.LENGTH_SHORT).show();
+                    }
                    // registrarUsuarioCl();
                 }
                 else{
@@ -143,6 +149,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
     }
     private void registrarUsuarioCl(){
+
+        /*
         String UNamecl=TxtUserNamecl.getText().toString().trim();
         String Contrasenacl=TxtContrasenacl.getText().toString().trim();
         String CContrasenacl=TxtCContrasenacl.getText().toString().trim();
@@ -173,6 +181,9 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
             return;
         }
 
+        */
+
+        //mAuth.createUserWithEmailAndPassword(mail, contrase).addOnCanceledListener(new OnCompleteListener)
 
 
     }
