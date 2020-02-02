@@ -65,7 +65,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                         strGender = mGenderOption.getText().toString();
                         break;
                     case R.id.rb_femenino:
-                        //strGender = mGenderOption.getText().toString();
+                        strGender = mGenderOption.getText().toString();
                         break;
 
                     default:
