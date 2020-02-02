@@ -83,8 +83,17 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         REGISTRARC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                userCli = TxtUserNamecl.getText().toString();
+                contrase = TxtContrasenacl.getText().toString();
+                ccontrase = TxtCContrasenacl.getText().toString()
+                nameCli = TxtNombrecl.getText().toString();
+                apecli = TxtApellidocl.getText().toString();
+                mail = TxtEmailcl.getText().toString();
+                cuenta = TxtNCBancariacl.getText().toString();
+                fechana = TxtFNacimientocl.getText().toString();
+                direccion = TxtDireccioncl.getText().toString();
             }
+        
         });
 
 
