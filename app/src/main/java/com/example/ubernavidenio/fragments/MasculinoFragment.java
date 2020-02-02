@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.ubernavidenio.MenuMasculinoR;
 import com.example.ubernavidenio.R;
 
 /**
@@ -82,14 +81,6 @@ public class MasculinoFragment extends Fragment {
 
         polo=(ImageView) view.findViewById(R.id.imageView17);
 
-        polo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Polo = new Intent(getActivity(), MenuMasculinoR.class);
-                getActivity().startActivity(Polo);
-            }
-        });
-
         return view;
     }
 
@@ -115,6 +106,16 @@ public class MasculinoFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    public void onClick(View view) {
+        polo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Polo = new Intent(getActivity(), RPolo.class);
+                getActivity().startActivity(Polo);
+            }
+        });
     }
 
     /**
