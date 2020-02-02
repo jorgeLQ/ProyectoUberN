@@ -17,7 +17,6 @@ public class registrar_entregador_view_controler extends AppCompatActivity {
 
      private EditText txtNombre, txtapellido, txtedad, txttelef, txtcorreo, txtcuentaahorro, txtcontra, txtcontra2;
      Button btnregistrar;
-
      private DatabaseReference Rentregador;
 
 
