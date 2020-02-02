@@ -165,7 +165,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-        
+
 
 
     }
