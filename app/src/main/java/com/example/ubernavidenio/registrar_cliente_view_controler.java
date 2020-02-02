@@ -11,7 +11,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+//import com.google.firebase.auth.FirebaseAuth;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
 
@@ -28,15 +31,16 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private EditText TxtDireccioncl;
 
 
-    private Button REGISTRARC;
-    private Button CANCELARC;
+     Button REGISTRARC;
+     Button CANCELARC;
 
 
-    private FirebaseAuth mAuth;
+    //private FirebaseAuth mAuth;
+    private DatabaseReference Rcliente;
 
     //Variable de datos que van a ser registrados
 
-    private String userCli="";
+    /*private String userCli="";
     private String contrase="";
     private String ccontrase="";
     private String nameCli="";
@@ -44,7 +48,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private String mail="";
     private String cuenta="";
     private String fechana="";
-    private String direccion="";
+    private String direccion="";*/
 
 
 
@@ -53,9 +57,17 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_cliente_view_controler);
+        Rcliente= FirebaseDatabase.getInstance().getReference("Rcliente");
 
+       // mAuth = FirebaseAuth.getInstance();
 
-        mAuth = FirebaseAuth.getInstance();
+        Button CANCELARC= (Button) findViewById(R.id.CANCELARC);
+        CANCELARC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         TxtUserNamecl = (EditText) findViewById(R.id.TxtUserNamecl);
@@ -79,9 +91,20 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
+        Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
+        btnRegTarjet.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                registrarUsuarioCl();
+                Intent intent = new Intent(v.getContext(), registrar_targeta_view_controler.class);
+                startActivityForResult(intent, 0);
+            }
+        });
 
 
-        REGISTRARC.setOnClickListener(new View.OnClickListener() {
+
+        /*REGISTRARC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 userCli = TxtUserNamecl.getText().toString();
@@ -95,8 +118,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 direccion = TxtDireccioncl.getText().toString();
 
 
-
-                if (!userCli.isEmpty() && !contrase.isEmpty() && !ccontrase.isEmpty() && !nameCli.isEmpty()
+                /*
+               if (!userCli.isEmpty() && !contrase.isEmpty() && !ccontrase.isEmpty() && !nameCli.isEmpty()
                         && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty() && !direccion.isEmpty()){
 
                     if(contrase.length()>=6){
@@ -112,9 +135,12 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
 
+
+
+
             }
 
-        });
+        });*/
 
 
 
@@ -134,15 +160,9 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-        /*
-        Button cerrar= (Button) findViewById(R.id.CANCELARC);
-        cerrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        */
+
+
+
 
 
 
@@ -158,7 +178,26 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         String FNacimientocl=TxtFNacimientocl.getText().toString().trim();
         String Direccioncl=TxtDireccioncl.getText().toString().trim();
 
+        String M = Masculinocl.getText().toString().trim();
 
+
+        if(!TextUtils.isEmpty(Contrasenacl)){
+
+            String id=Rcliente.push().getKey();
+
+
+            /*
+            Rcliente rcliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, M , FNacimientocl,Direccioncl);
+            Rcliente.child("Clientes").child(id).setValue(Rcliente);
+            Toast.makeText(this, "Cliente Registrado", Toast.LENGTH_LONG).show();
+
+            */
+
+        } else {
+
+            Toast.makeText(this, "Debe introducir la contraseña", Toast.LENGTH_LONG).show();
+
+        }
 
 
 
