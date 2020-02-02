@@ -151,14 +151,14 @@
         android:layout_height="wrap_content"
         android:text="registrar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CANCELARC"
+        app:layout_constraintEnd_toStartOf="@+id/btncancelar"
         app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19"
         app:layout_constraintVertical_bias="0.521" />
 
     <Button
-        android:id="@+id/CANCELARC"
+        android:id="@+id/btncancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
