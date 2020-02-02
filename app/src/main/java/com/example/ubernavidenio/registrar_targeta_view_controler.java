@@ -69,11 +69,11 @@ public class registrar_targeta_view_controler extends AppCompatActivity {
             String id= Rtarjeta.push().getKey();
             RTarjeta DatosTrjeta = new RTarjeta(CV,TARJETA,FECHA);
             Rtarjeta.child("Tarjeta").child(id).setValue(DatosTrjeta);
-            Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Tarjeta Registrada", Toast.LENGTH_LONG).show();
 
         } else {
 
-            Toast.makeText(this, "Debe introducir el nombre", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debe introducir correctamente los datos", Toast.LENGTH_LONG).show();
 
         }
 
