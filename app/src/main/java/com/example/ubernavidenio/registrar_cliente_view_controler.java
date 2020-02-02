@@ -2,7 +2,8 @@ package com.example.ubernavidenio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+//import android.content.Intent;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
@@ -23,8 +24,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private EditText TxtApellidocl;
     private EditText TxtEmailcl;
     private EditText TxtNCBancariacl;
-    private RadioButton Masculinocl;
-    private RadioButton Femeninocl;
+    private RadioButton Masculino, Femenino;
     private EditText TxtFNacimientocl;
     private EditText TxtDireccioncl;
 
@@ -66,8 +66,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         TxtApellidocl = (EditText) findViewById(R.id.TxtApellidocl);
         TxtEmailcl = (EditText) findViewById(R.id.TxtEmailcl);
         TxtNCBancariacl = (EditText) findViewById(R.id.TxtNCBancariacl);
-        Masculinocl = (RadioButton) findViewById(R.id.Masculino);
-        Femeninocl = (RadioButton) findViewById(R.id.Femenino);
+        Masculino = (RadioButton) findViewById(R.id.Masculino);
+        Femenino = (RadioButton) findViewById(R.id.Femenino);
         TxtFNacimientocl = (EditText) findViewById(R.id.TxtFNacimientocl);
         TxtDireccioncl = (EditText) findViewById(R.id.TxtDireccioncl);
 
@@ -95,8 +95,10 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 direccion = TxtDireccioncl.getText().toString();
 
 
+
                 if (!userCli.isEmpty() && !contrase.isEmpty() && !ccontrase.isEmpty() && !nameCli.isEmpty()
-                    && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty() && !direccion.isEmpty()){
+                    && !apecli.isEmpty() && !mail.isEmpty() && !cuenta.isEmpty() && !fechana.isEmpty()
+                        && !direccion.isEmpty()){
 
                     if(contrase.length()>=6){
                     }
@@ -135,15 +137,15 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-        /*
-        Button cerrar= (Button) findViewById(R.id.CANCELARC);
-        cerrar.setOnClickListener(new View.OnClickListener() {
+
+        CANCELARC = (Button) findViewById(R.id.CANCELARC);
+        CANCELARC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        */
+
 
 
 
@@ -163,18 +165,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
 
-        if(!TextUtils.isEmpty(contrasenia1)){
-
-            String id= Rentregador.push().getKey();
-            Rentregador entregador = new Rentregador(id, nombre, apellido, edad, telefono, correo, ctaahorro, contrasenia1, contrasenia2);
-            Rentregador.child("Entregadores").child(id).setValue(entregador);
-            Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
-
-        } else {
-
-            Toast.makeText(this, "Debe introducir la contraseña", Toast.LENGTH_LONG).show();
-
-        }
+        
 
 
     }
