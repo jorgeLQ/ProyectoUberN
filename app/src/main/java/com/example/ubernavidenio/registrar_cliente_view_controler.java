@@ -19,23 +19,16 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
 
-    private EditText TxtUserNamecl;
-    private EditText TxtContrasenacl;
-    private EditText TxtCContrasenacl;
-    private EditText TxtNombrecl;
-    private EditText TxtApellidocl;
-    private EditText TxtEmailcl;
-    private EditText TxtNCBancariacl;
+    private EditText TxtUserNamecl, TxtContrasenacl, TxtCContrasenacl, TxtNombrecl, TxtApellidocl, TxtEmailcl,
+     TxtNCBancariacl, TxtFNacimientocl, TxtDireccioncl;
 
     private RadioGroup mGender;
     private RadioButton mGenderOption;
-    private EditText TxtFNacimientocl;
-    private EditText TxtDireccioncl;
+
 
     String strGender;
     Button REGISTRARC;
-
-    //Button CANCELARC;
+    Button CANCELARC;
 
 
     private DatabaseReference Rcliente;
@@ -49,13 +42,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
         // mAuth = FirebaseAuth.getInstance();
 
-        /*Button CANCELARC= (Button) findViewById(R.id.btncancelar);
-        CANCELARC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });*/
+        //Button CANCELARC= (Button) findViewById(R.id.btncancelar);
+
 
 
         TxtUserNamecl = (EditText) findViewById(R.id.TxtUserNamecl);
@@ -73,11 +61,11 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
                 mGenderOption = mGender.findViewById(checkedId);
 
                 switch (checkedId){
-                    case R.id.rb_femenino:
-                        strGender = mGenderOption.getText().toString();
-                        break;
                     case R.id.rb_masculino:
                         strGender = mGenderOption.getText().toString();
+                        break;
+                    case R.id.rb_femenino:
+                        //strGender = mGenderOption.getText().toString();
                         break;
 
                     default:
@@ -91,12 +79,19 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         TxtFNacimientocl = findViewById(R.id.TxtFNacimientocl);
         TxtDireccioncl = findViewById(R.id.TxtDireccioncl);
 
-
+        CANCELARC = (Button) findViewById(R.id.btncancelar);
+        CANCELARC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         REGISTRARC = (Button) findViewById(R.id.REGISTRARC);
+
         //CANCELARC = (Button) findViewById(R.id.btncancelar);
 
-        REGISTRARC.setOnClickListener((View.OnClickListener) this);
+        //REGISTRARC.setOnClickListener((View.OnClickListener) this);
        // CANCELARC.setOnClickListener((View.OnClickListener) this);
 
 
@@ -108,9 +103,9 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         //tarjeta
 
 
-        Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
-        btnRegTarjet.setOnClickListener(new View.OnClickListener() {
+        //Button btnRegTarjet = (Button) findViewById(R.id.REGISTRARC);
 
+        REGISTRARC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 registrarUsuarioCl();
@@ -177,22 +172,16 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
             String id=Rcliente.push().getKey();
 
-
-
             Rcliente cliente = new Rcliente(id, UNamecl,Contrasenacl, CContrasenacl, Nombrecl, Apellidocl, Emailcl, CBancariacl, sexo , FNacimientocl,Direccioncl);
 
             Rcliente.child("Clientes").child(id).setValue(cliente);
             Toast.makeText(this, "Cliente Registrado", Toast.LENGTH_LONG).show();
-
-
 
         } else {
 
             Toast.makeText(this, "Debe introducir la contraseña", Toast.LENGTH_LONG).show();
 
         }
-
-
 
     }
 }
