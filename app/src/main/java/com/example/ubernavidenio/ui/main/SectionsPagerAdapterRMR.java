@@ -14,13 +14,13 @@ import com.example.ubernavidenio.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapterR extends FragmentPagerAdapter {
+public class SectionsPagerAdapterRMR extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1R, R.string.tab_text_2R,R.string.tab_text_3R};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1MR, R.string.tab_text_2MR};
     private final Context mContext;
 
-    public SectionsPagerAdapterR(Context context, FragmentManager fm) {
+    public SectionsPagerAdapterRMR(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -28,8 +28,8 @@ public class SectionsPagerAdapterR extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragmentR (defined as a static inner class below).
-        return PlaceholderFragmentR.newInstance(position + 1);
+        // Return a PlaceholderFragmentMRM (defined as a static inner class below).
+        return PlaceholderFragmentMRM.newInstance(position + 1);
     }
 
     @Nullable
@@ -38,10 +38,9 @@ public class SectionsPagerAdapterR extends FragmentPagerAdapter {
         return mContext.getResources().getString(TAB_TITLES[position]);
     }
 
-
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 2;
     }
 }

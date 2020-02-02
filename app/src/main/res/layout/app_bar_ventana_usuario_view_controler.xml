@@ -37,14 +37,14 @@
         app:srcCompat="@drawable/rmapa" />
 
     <TextView
-        android:id="@+id/textRopa"
-        android:layout_width="111dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textHogar"
+        android:layout_width="223dp"
+        android:layout_height="152dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="27dp"
-        android:text="ROPA"
+        android:layout_marginEnd="-7dp"
+        android:layout_marginBottom="-6dp"
+        android:text="ACCESORIOS PARA EL HOGAR"
         android:textSize="36sp" />
 
     <TextView
@@ -53,20 +53,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginBottom="169dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="454dp"
         android:text="TEGNOLOGIA"
         android:textSize="36sp" />
 
     <TextView
-        android:id="@+id/textHogar"
-        android:layout_width="219dp"
-        android:layout_height="128dp"
+        android:id="@+id/textRopa"
+        android:layout_width="144dp"
+        android:layout_height="84dp"
         android:layout_above="@+id/textComida"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="185dp"
-        android:text="ACCESORIOS PARA EL HOGAR"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="189dp"
+        android:text="ROPA"
         android:textSize="36sp" />
 
     <TextView
@@ -76,7 +76,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="-8dp"
-        android:layout_marginBottom="302dp"
+        android:layout_marginBottom="328dp"
         android:text="COMIDA"
         android:textSize="36sp" />
 
@@ -86,8 +86,8 @@
         android:layout_height="111dp"
         android:layout_above="@+id/textComida"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="-7dp"
+        android:layout_marginBottom="-216dp"
         android:text="ACCESORIOS DE COCINA"
         android:textSize="36sp" />
 
@@ -96,25 +96,25 @@
         android:layout_width="191dp"
         android:layout_height="110dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="24dp"
         android:onClick="onClick"
-        app:srcCompat="@drawable/rop" />
+        app:srcCompat="@drawable/hogar" />
 
     <ImageView
         android:id="@+id/imageView22"
         android:layout_width="191dp"
         android:layout_height="110dp"
         android:layout_above="@+id/imageView21"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="34dp"
         android:onClick="onClick"
-        app:srcCompat="@drawable/teg" />
+        app:srcCompat="@drawable/cocina" />
 
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="191dp"
         android:layout_height="110dp"
         android:layout_above="@+id/imageView22"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="23dp"
         android:onClick="onClick"
         app:srcCompat="@drawable/comida" />
 
@@ -123,16 +123,16 @@
         android:layout_width="191dp"
         android:layout_height="110dp"
         android:layout_above="@+id/imageView23"
-        android:layout_marginBottom="19dp"
-        app:srcCompat="@drawable/cocina" />
+        android:layout_marginBottom="21dp"
+        app:srcCompat="@drawable/teg" />
 
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="187dp"
         android:layout_height="137dp"
         android:layout_above="@+id/imageView24"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="7dp"
         android:onClick="onClick"
-        app:srcCompat="@drawable/hogar" />
+        app:srcCompat="@drawable/rop" />
 
 </RelativeLayout>

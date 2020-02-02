@@ -7,24 +7,24 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.ubernavidenio.fragments.Femenino;
-import com.example.ubernavidenio.fragments.MasculinoFragment;
-import com.example.ubernavidenio.fragments.UnixeFragment;
-import com.example.ubernavidenio.ui.main.SectionsPagerAdapterR;
+import com.example.ubernavidenio.fragments.CelularesFragment;
+import com.example.ubernavidenio.fragments.ComputadorasFragment;
+import com.example.ubernavidenio.fragments.Impresora;
+import com.example.ubernavidenio.fragments.TelevisoresFragment;
+import com.example.ubernavidenio.ui.main.SectionsPagerAdapterT;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
-public class Menu_Ropa extends AppCompatActivity implements MasculinoFragment.OnFragmentInteractionListener, Femenino.OnFragmentInteractionListener, UnixeFragment.OnFragmentInteractionListener {
-
+public class Menu_Tegnologia extends AppCompatActivity implements TelevisoresFragment.OnFragmentInteractionListener, ComputadorasFragment.OnFragmentInteractionListener, Impresora.OnFragmentInteractionListener, CelularesFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu__ropa);
-        SectionsPagerAdapterR sectionsPagerAdapterR = new SectionsPagerAdapterR(this, getSupportFragmentManager());
+        setContentView(R.layout.activity_menu__tegnologia);
+        SectionsPagerAdapterT sectionsPagerAdapterT = new SectionsPagerAdapterT(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(sectionsPagerAdapterR);
+        viewPager.setAdapter(sectionsPagerAdapterT);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -36,13 +36,10 @@ public class Menu_Ropa extends AppCompatActivity implements MasculinoFragment.On
                         .setAction("Action", null).show();
             }
         });
-
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
-
-
 }

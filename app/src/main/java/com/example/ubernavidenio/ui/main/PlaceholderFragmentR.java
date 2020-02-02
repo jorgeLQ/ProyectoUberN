@@ -20,7 +20,7 @@ import com.example.ubernavidenio.fragments.UnixeFragment;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class PlaceholderFragment extends Fragment {
+public class PlaceholderFragmentR extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
