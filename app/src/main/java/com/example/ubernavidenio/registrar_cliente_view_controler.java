@@ -34,10 +34,17 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    //Variable de datos que van a ser registrados 
+    //Variable de datos que van a ser registrados
 
+    private String userCli="";
+    private String contrase="";
+    private String ccontrase="";
     private String nameCli="";
-
+    private String apecli="";
+    private String mail="";
+    private String cuenta="";
+    private String fechana="";
+    private String direccion="";
 
 
 
