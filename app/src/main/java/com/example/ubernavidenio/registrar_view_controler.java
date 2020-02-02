@@ -15,6 +15,7 @@ public class registrar_view_controler extends AppCompatActivity {
         setContentView(R.layout.activity_registro_view_controler);
 
 
+
         Button btnRegistroCliente = (Button) findViewById(R.id.RegistrarUsuario);
         btnRegistroCliente.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-//import com.google.firebase.auth.FirebaseAuth;
+
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
 
@@ -34,25 +34,11 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
     String strGender;
     Button REGISTRARC;
-    Button CANCELARC;
+
+    //Button CANCELARC;
 
 
-    //private FirebaseAuth mAuth;
     private DatabaseReference Rcliente;
-
-    //Variable de datos que van a ser registrados
-
-    /*private String userCli="";
-    private String contrase="";
-    private String ccontrase="";
-    private String nameCli="";
-    private String apecli="";
-    private String mail="";
-    private String cuenta="";
-    private String fechana="";
-    private String direccion="";*/
-
-
 
 
     @Override
@@ -63,13 +49,13 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
         // mAuth = FirebaseAuth.getInstance();
 
-        Button CANCELARC= (Button) findViewById(R.id.CANCELARC);
+        /*Button CANCELARC= (Button) findViewById(R.id.btncancelar);
         CANCELARC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
 
 
         TxtUserNamecl = (EditText) findViewById(R.id.TxtUserNamecl);
@@ -107,10 +93,10 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
 
 
         REGISTRARC = (Button) findViewById(R.id.REGISTRARC);
-        CANCELARC = (Button) findViewById(R.id.CANCELARC);
+        //CANCELARC = (Button) findViewById(R.id.btncancelar);
 
         REGISTRARC.setOnClickListener((View.OnClickListener) this);
-        CANCELARC.setOnClickListener((View.OnClickListener) this);
+       // CANCELARC.setOnClickListener((View.OnClickListener) this);
 
 
         //radio button
