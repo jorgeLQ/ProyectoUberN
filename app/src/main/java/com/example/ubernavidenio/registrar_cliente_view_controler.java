@@ -33,8 +33,8 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private EditText TxtDireccioncl;
 
     String strGender;
-     Button REGISTRARC;
-     Button CANCELARC;
+    Button REGISTRARC;
+    Button CANCELARC;
 
 
     //private FirebaseAuth mAuth;
@@ -61,7 +61,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_cliente_view_controler);
         Rcliente= FirebaseDatabase.getInstance().getReference("Rcliente");
 
-       // mAuth = FirebaseAuth.getInstance();
+        // mAuth = FirebaseAuth.getInstance();
 
         Button CANCELARC= (Button) findViewById(R.id.CANCELARC);
         CANCELARC.setOnClickListener(new View.OnClickListener() {
@@ -80,24 +80,24 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
         TxtEmailcl = (EditText) findViewById(R.id.TxtEmailcl);
         TxtNCBancariacl = (EditText) findViewById(R.id.TxtNCBancariacl);
 
-         mGender = findViewById(R.id.rg_gender);
-         mGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-             @Override
-             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                 mGenderOption = mGender.findViewById(checkedId);
+        mGender = findViewById(R.id.rg_gender);
+        mGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                mGenderOption = mGender.findViewById(checkedId);
 
-                 switch (checkedId){
-                     case R.id.rb_femenino:
+                switch (checkedId){
+                    case R.id.rb_femenino:
                         strGender = mGenderOption.getText().toString();
                         break;
-                     case R.id.rb_masculino:
-                         strGender = mGenderOption.getText().toString();
+                    case R.id.rb_masculino:
+                        strGender = mGenderOption.getText().toString();
                         break;
-                     default:
+                    default:
 
-                 }
-             }
-         });
+                }
+            }
+        });
 
 
 
