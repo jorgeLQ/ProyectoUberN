@@ -9,7 +9,9 @@ import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
+
+
+//import com.google.firebase.auth.FirebaseAuth;
 
 public class registrar_cliente_view_controler extends AppCompatActivity {
 
@@ -30,7 +32,7 @@ public class registrar_cliente_view_controler extends AppCompatActivity {
     private Button CANCELARC;
 
 
-    private FirebaseAuth mAuth;
+   // private FirebaseAuth mAuth;
 
     //Variable de datos que van a ser registrados
 
