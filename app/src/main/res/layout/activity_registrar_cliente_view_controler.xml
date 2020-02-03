@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="23dp"
-        android:text="Confirmar Contraseña:"
+        android:text="Confimar Contraseña"
         app:layout_constraintEnd_toStartOf="@+id/TxtCContrasenacl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -26,7 +26,7 @@
         android:layout_marginTop="23dp"
         android:layout_marginEnd="82dp"
         android:layout_marginBottom="25dp"
-        android:text="User Name:"
+        android:text="user name"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toStartOf="@+id/TxtUserNamecl"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +36,7 @@
         android:id="@+id/imageView5"
         android:layout_width="430dp"
         android:layout_height="143dp"
+        android:contentDescription="todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:text="REGISTRO DE USUARIO"
+        android:text="Registro de Usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -58,7 +59,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="102dp"
-        android:text="Nombre:"
+        android:text="Nombre"
         app:layout_constraintEnd_toStartOf="@+id/TxtNombrecl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -70,7 +71,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="111dp"
-        android:text="Correo:"
+        android:text="Correo"
         app:layout_constraintEnd_toStartOf="@+id/TxtEmailcl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -82,7 +83,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="101dp"
-        android:text="Apellido:"
+        android:text="Apellido"
         app:layout_constraintEnd_toStartOf="@+id/TxtApellidocl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -94,7 +95,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="79dp"
-        android:text="Contraseña:"
+        android:text="Contraseña"
         app:layout_constraintEnd_toStartOf="@+id/TxtContrasenacl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -105,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="24dp"
-        android:text="Numero Cuenta Bancaria:"
+        android:text="Numero_cuenta_bancaria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -113,9 +114,9 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Sexo:"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:text="Sexo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -124,12 +125,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="44dp"
-        android:text="Fecha Nacimiento:"
+        android:text="Fecha_nacimiento"
         app:layout_constraintEnd_toStartOf="@+id/TxtFNacimientocl"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Masculino" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/textView19"
@@ -138,7 +140,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="99dp"
-        android:text="Direccion:"
+        android:text="Direccion"
         app:layout_constraintEnd_toStartOf="@+id/TxtDireccioncl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -147,29 +149,28 @@
         android:id="@+id/REGISTRARC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="26dp"
-        android:text="REGISTRAR"
+        android:text="registrar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CANCELARC"
+        app:layout_constraintEnd_toStartOf="@+id/btncancelar"
+        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.521" />
 
     <Button
-        android:id="@+id/CANCELARC"
+        android:id="@+id/btncancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="82dp"
         android:layout_marginBottom="26dp"
-        android:text="CANCELAR"
+        android:text="cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/REGISTRARC"
-        app:layout_constraintTop_toBottomOf="@+id/TxtDireccioncl" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtDireccioncl"
+        app:layout_constraintVertical_bias="0.789" />
 
     <EditText
         android:id="@+id/TxtUserNamecl"
@@ -181,7 +182,8 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/TxtContrasenacl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtContrasenacl"
@@ -193,7 +195,8 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/TxtCContrasenacl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtUserNamecl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtUserNamecl"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtCContrasenacl"
@@ -205,7 +208,8 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/TxtNombrecl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtContrasenacl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtContrasenacl"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtNombrecl"
@@ -216,7 +220,8 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/TxtApellidocl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtCContrasenacl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtCContrasenacl"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtApellidocl"
@@ -227,7 +232,8 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/TxtEmailcl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtNombrecl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtNombrecl"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtEmailcl"
@@ -238,7 +244,8 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/TxtNCBancariacl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtApellidocl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtApellidocl"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtNCBancariacl"
@@ -248,48 +255,60 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtEmailcl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtEmailcl"
+        android:autofillHints="" />
 
-    <RadioButton
-        android:id="@+id/Masculino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="6dp"
-        android:text="Masculino"
-        app:layout_constraintBottom_toTopOf="@+id/TxtFNacimientocl"
-        app:layout_constraintEnd_toStartOf="@+id/Femenino" />
-
-    <RadioButton
-        android:id="@+id/Femenino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="83dp"
-        android:text="Femenino"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtNCBancariacl" />
 
     <EditText
         android:id="@+id/TxtFNacimientocl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Femenino" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtNCBancariacl"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/TxtDireccioncl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtFNacimientocl" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtFNacimientocl"
+        android:autofillHints="" />
+
+    <RadioGroup
+        android:id="@+id/rg_gender"
+        android:layout_width="194dp"
+        android:layout_height="29dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/TxtFNacimientocl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtNCBancariacl"
+        app:layout_constraintVertical_bias="0.717">
+
+
+        <RadioButton
+            android:id="@+id/rb_femenino"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Femenino" />
+
+        <RadioButton
+            android:id="@+id/rb_masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+    </RadioGroup>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

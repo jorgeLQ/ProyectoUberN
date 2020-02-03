@@ -4,13 +4,13 @@ public class RTarjeta {
     String cv;
     String ntarjeta;
     String fexpira;
-    //String tipotarjeta;
+    String tipotarjeta;
 
-    public RTarjeta(String cv, String ntarjeta, String fexpira) {
+    public RTarjeta(String cv, String ntarjeta, String fexpira, String tipotarjeta) {
         this.cv=cv;
         this.ntarjeta=ntarjeta;
         this.fexpira=fexpira;
-        //this.tipotarjeta=tipotarjeta;
+        this.tipotarjeta=tipotarjeta;
     }
     public String getCv() {
         return cv;
@@ -36,13 +36,13 @@ public class RTarjeta {
         this.fexpira=fexpira;
     }
 
-    //public String getTipotarjeta() {
-  //      return tipotarjeta;
-   // }
+    public String getTipotarjeta() {
+        return tipotarjeta;
+    }
 
-  /*  public void setTipotarjeta(String tipotarjeta) {
+    public void setTipotarjeta(String tipotarjeta) {
         this.tipotarjeta=tipotarjeta;
     }
-*/
+
 
 }

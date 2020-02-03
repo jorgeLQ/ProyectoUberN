@@ -15,9 +15,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class registrar_entregador_view_controler extends AppCompatActivity {
 
-EditText txtNombre, txtapellido, txtedad, txttelef, txtcorreo, txtcuentaahorro, txtcontra, txtcontra2;
-Button btnregistrar;
-
+     private EditText txtNombre, txtapellido, txtedad, txttelef, txtcorreo, txtcuentaahorro, txtcontra, txtcontra2;
+     Button btnregistrar;
      private DatabaseReference Rentregador;
 
 
@@ -30,7 +29,13 @@ Button btnregistrar;
         Rentregador= FirebaseDatabase.getInstance().getReference("Rentregador");
 
 
-
+        Button cerrar= (Button) findViewById(R.id.CANCELAR2);
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         txtNombre=(EditText) findViewById(R.id.nombreentregador);
         txtapellido=(EditText) findViewById(R.id.apellidoentregador);
@@ -47,17 +52,14 @@ Button btnregistrar;
         btnAutomor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                registrarEntregador();
                 Intent intent = new Intent (v.getContext(), registar_automotor_view_controler.class);
                 startActivityForResult(intent, 0);
             }
         });
-        Button cerrar= (Button) findViewById(R.id.CANCELAR2);
-        cerrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
+
+
 
 
 
@@ -75,18 +77,21 @@ Button btnregistrar;
         String contrasenia2=txtcontra2.getText().toString();
 
 
-         if(!TextUtils.isEmpty(nombre)){
 
-         String id= Rentregador.push().getKey();
-         Rentregador entregador = new Rentregador(id, nombre, apellido, edad, telefono, correo, ctaahorro, contrasenia1, contrasenia2);
-         Rentregador.child("Entregadores").child(id).setValue(entregador);
-         Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
+
+         if(!TextUtils.isEmpty(contrasenia1)){
+
+             String id= Rentregador.push().getKey();
+             Rentregador entregador = new Rentregador(id, nombre, apellido, edad, telefono, correo, ctaahorro, contrasenia1, contrasenia2);
+             Rentregador.child("Entregadores").child(id).setValue(entregador);
+             Toast.makeText(this, "Entregador Registrado", Toast.LENGTH_LONG).show();
 
          } else {
 
-             Toast.makeText(this, "Debe introducir el nombre", Toast.LENGTH_LONG).show();
+             Toast.makeText(this, "Debe introducir la contraseña", Toast.LENGTH_LONG).show();
 
          }
+
 
      }
 
