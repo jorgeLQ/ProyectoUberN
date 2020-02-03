@@ -13,26 +13,23 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.ubernavidenio.R;
-import com.example.ubernavidenio.fragments.Femenino;
-import com.example.ubernavidenio.fragments.MasculinoFragment;
-import com.example.ubernavidenio.fragments.UnixeFragment;
+import com.example.ubernavidenio.fragments.RPolo;
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class PlaceholderFragment extends Fragment {
+public class PlaceholderFragmentMRM extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PageViewModelR pageViewModelR;
+    private PageViewModelMRM pageViewModelMRM;
 
     public static Fragment newInstance(int index) {
         Fragment fragment=null;
 
         switch (index){
-            case 1:fragment=new MasculinoFragment();break;
-            case 2:fragment=new Femenino();break;
-            case 3:fragment=new UnixeFragment();break;
+            case 1:fragment=new RPolo();break;
+            case 2:fragment=new RPolo();break;
         }
         return fragment;
     }
@@ -40,21 +37,21 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModelR = ViewModelProviders.of(this).get(PageViewModelR.class);
+        pageViewModelMRM = ViewModelProviders.of(this).get(PageViewModelMRM.class);
         int index = 1;
         if (getArguments() != null) {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
-        pageViewModelR.setIndex(index);
+        pageViewModelMRM.setIndex(index);
     }
 
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_menu__ropa, container, false);
+        View root = inflater.inflate(R.layout.fragment_menu_masculino_r, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
-        pageViewModelR.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        pageViewModelMRM.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
@@ -62,6 +59,4 @@ public class PlaceholderFragment extends Fragment {
         });
         return root;
     }
-
-
 }

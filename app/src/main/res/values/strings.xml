@@ -36,4 +36,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu__tegnologia">Menu_Tegnologia</string>
+    <string name="tab_text_1T">Televisores</string>
+    <string name="tab_text_2T">Computadoras</string>
+    <string name="tab_text_3T">Impresoras</string>
+    <string name="tab_text_4T">Celuares</string>
+
+    <string name="title_activity_menu_masculino_r">MenuMasculinoR</string>
+    <string name="tab_text_1MR">Camisas</string>
+    <string name="tab_text_2MR">Pantalones</string>
 </resources>

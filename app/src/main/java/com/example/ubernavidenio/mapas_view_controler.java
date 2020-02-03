@@ -89,24 +89,32 @@ public class mapas_view_controler extends FragmentActivity implements OnMapReady
     public void Pointers(GoogleMap googleMap) {
         mGoogleMap=googleMap;
 
+
         final LatLng punto1=new LatLng(-0.2104022, -78.4888627);
         final LatLng punto2=new LatLng(-0.2321669, -78.5055793);
         final LatLng punto3=new LatLng(-0.3005394, -78.4598161);
         final LatLng punto4=new LatLng(-0.2915984, -78.4008312);
         final LatLng punto5=new LatLng(-0.2883114, -78.4034727);
         final LatLng punto6=new LatLng(-0.2118599, -78.4914343);
+        final LatLng punto7=new LatLng(-0.2006809,-78.5045751);
+        final LatLng punto8=new LatLng(-0.3006414,-78.4665587);
+        final LatLng punto9=new LatLng(-0.2876241,-78.4418981);
+        final LatLng punto10=new LatLng(-0.3849584,-78.514375);
+        final LatLng punto11=new LatLng(-0.2737559,-78.4868863);
+        final LatLng punto12=new LatLng(-0.230788,-78.5234213);
 
-        mGoogleMap.addMarker(new MarkerOptions().position(punto1).title("EPN").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mGoogleMap.addMarker(new MarkerOptions().position(punto2).title("TREBOL").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mGoogleMap.addMarker(new MarkerOptions().position(punto3).title("TRIANGULO").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-        mGoogleMap.addMarker(new MarkerOptions().position(punto4).title("LA MERCED").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
-        mGoogleMap.addMarker(new MarkerOptions().position(punto5).title("MI CASA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
-        mGoogleMap.addMarker(new MarkerOptions().position(punto6).title("EPN").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
-
-        Polyline line=mGoogleMap.addPolyline(new PolylineOptions().add(punto1, punto2).width(10).color(Color.BLACK));
-        Polyline line2=mGoogleMap.addPolyline(new PolylineOptions().add(punto3, punto4).width(10).color(Color.RED));
-        Polyline line3=mGoogleMap.addPolyline(new PolylineOptions().add(punto5, punto6).width(10).color(Color.BLUE));
-
+        mGoogleMap.addMarker(new MarkerOptions().position(punto1).title("PIKA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto2).title("KFC").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto3).title("CAMISERIA INGLESA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto4).title("CREACIONES J.").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto5).title("ELECTRONICA QUITO").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto6).title("ELECTROMUNDO").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto7).title("TIA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto8).title("SUPERMAXI").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto9).title("CANTUÑA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto10).title("AMAGUAÑA :)IRQC").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto11).title("CREACIONES ARMENIA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        mGoogleMap.addMarker(new MarkerOptions().position(punto12).title("RESTAURANT QUITO").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
 
     }
 

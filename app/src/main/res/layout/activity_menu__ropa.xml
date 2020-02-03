@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -38,15 +38,11 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
-
+    <FrameLayout
+        android:id="@+id/ropapolo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClick"></FrameLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
