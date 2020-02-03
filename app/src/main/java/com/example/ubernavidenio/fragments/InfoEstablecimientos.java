@@ -1,30 +1,29 @@
 package com.example.ubernavidenio.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.example.ubernavidenio.Interfaces.IComunicaInterface;
 import com.example.ubernavidenio.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link RPolo.OnFragmentInteractionListener} interface
+ * {@link InfoEstablecimientos.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RPolo#newInstance} factory method to
+ * Use the {@link InfoEstablecimientos#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RPolo extends Fragment {
-
-
+public class InfoEstablecimientos extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,11 +35,12 @@ public class RPolo extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    Spinner sp1;
-    Spinner sp2;
+    Button tienda;
+    IComunicaInterface tiendapolo;
     View vista;
+    Activity actividad;
 
-    public RPolo() {
+    public InfoEstablecimientos() {
         // Required empty public constructor
     }
 
@@ -50,11 +50,11 @@ public class RPolo extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RPolo.
+     * @return A new instance of fragment InfoEstablecimientos.
      */
     // TODO: Rename and change types and number of parameters
-    public static RPolo newInstance(String param1, String param2) {
-        RPolo fragment = new RPolo();
+    public static InfoEstablecimientos newInstance(String param1, String param2) {
+        InfoEstablecimientos fragment = new InfoEstablecimientos();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -74,18 +74,14 @@ public class RPolo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        vista=inflater.inflate(R.layout.fragment_rpolo, container, false);
-        sp1=(Spinner) vista.findViewById(R.id.spinner);
-        sp2=(Spinner) vista.findViewById(R.id.idTallas);
-
-        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(getContext(),
-                R.array.combotalla,android.R.layout.simple_spinner_item
-        );
-
-        sp1.setAdapter(adapter);
-        sp2.setAdapter(adapter);
-
+        vista=inflater.inflate(R.layout.fragment_info_establecimientos, container, false);
+        tienda=vista.findViewById(R.id.btnTienda);
+        tienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tiendapolo.ropaPolo();
+            }
+        });
         return vista;
     }
 
@@ -99,6 +95,10 @@ public class RPolo extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        if (context instanceof Activity) {
+            actividad= (Activity) context;
+            tiendapolo= (IComunicaInterface) actividad;
+        }
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {

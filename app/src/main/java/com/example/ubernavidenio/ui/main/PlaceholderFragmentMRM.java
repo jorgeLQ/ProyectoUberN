@@ -29,6 +29,7 @@ public class PlaceholderFragmentMRM extends Fragment {
 
         switch (index){
             case 1:fragment=new RPolo();break;
+            case 2:fragment=new RPolo();break;
         }
         return fragment;
     }

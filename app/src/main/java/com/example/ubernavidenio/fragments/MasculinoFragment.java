@@ -1,5 +1,6 @@
 package com.example.ubernavidenio.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -7,10 +8,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.ubernavidenio.Interfaces.IComunicaInterface;
 import com.example.ubernavidenio.R;
 
 /**
@@ -34,9 +37,6 @@ public class MasculinoFragment extends Fragment {
     private String mParam2;
 
     View view;
-    ImageView polo;
-
-
 
     private OnFragmentInteractionListener mListener;
 
@@ -79,8 +79,6 @@ public class MasculinoFragment extends Fragment {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_masculino, container, false);
 
-        polo=(ImageView) view.findViewById(R.id.imageView17);
-
         return view;
     }
 
@@ -108,15 +106,7 @@ public class MasculinoFragment extends Fragment {
         mListener = null;
     }
 
-    public void onClick(View view) {
-        polo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Polo = new Intent(getActivity(), RPolo.class);
-                getActivity().startActivity(Polo);
-            }
-        });
-    }
+
 
     /**
      * This interface must be implemented by activities that contain this

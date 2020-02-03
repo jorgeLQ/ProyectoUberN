@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="150dp" />
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="106dp" />
 
     <TextView
         android:id="@+id/textView31"
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="147dp"
         android:text="Talla:"
         android:textSize="18sp" />
 
@@ -34,8 +34,8 @@
         android:layout_height="209dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="333dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="289dp"
         android:src="@drawable/rpcasual" />
 
     <ImageView
@@ -45,20 +45,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="221dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/rpcasuall" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="598dp"
-        android:text="Polo Ralph Lauren "
-        android:textColorHint="#FFFFFF"
-        android:textSize="36sp" />
 
     <MultiAutoCompleteTextView
         android:id="@+id/multiAutoCompleteTextView"
@@ -66,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="550dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="505dp"
         android:text="Camisa Custom Fit de cuadros vichy" />
 
     <MultiAutoCompleteTextView
@@ -76,8 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="185dp"
-        android:layout_marginBottom="284dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="238dp"
         android:text="Camisa floral Custom Fit" />
 
     <TextView
@@ -86,8 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="501dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="464dp"
         android:text="Precio: US$40.00 - US$60.00"
         android:textSize="18sp" />
 
@@ -97,8 +85,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="191dp"
         android:text="Precio: US$60.00 - US$80.00"
         android:textSize="18sp" />
 
@@ -108,8 +96,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="441dp" />
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="378dp" />
 
     <TextView
         android:id="@+id/textView30"
@@ -117,8 +105,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="473dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="420dp"
         android:text="Talla:"
         android:textSize="18sp" />
 
@@ -128,8 +116,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="382dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="315dp"
         android:text=" - 65% poliéster \n - 30% algodón \n - 5% licra"
         android:textSize="14sp" />
 
@@ -139,8 +127,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="40dp"
         android:text=" - 50% poliéster \n - 10% licra \n - 5% algodón" />
 
 
