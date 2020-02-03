@@ -19,10 +19,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".InfoEstablecimiento"></activity>
+        <activity
+            android:name=".MenuMasculinoR"
+            android:label="@string/title_activity_menu_masculino_r"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Menu_Comida" />
+        <activity
+            android:name=".Menu_Tegnologia"
+            android:label="@string/title_activity_menu__tegnologia"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Menu_Ropa"
             android:label="@string/title_activity_menu__ropa"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ventana_entregador_view_controler"
             android:label="@string/title_activity_ventana_entregador_view_controler"

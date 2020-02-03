@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.MasculinoFragment"
-    android:background="@drawable/masculino">
-
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".fragments.ComputadorasFragment"
+    android:background="@drawable/computadoras">
 
     <ImageView
         android:id="@+id/imageView18"
@@ -18,11 +14,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="235dp"
         android:layout_marginBottom="460dp"
-        android:src="@drawable/tomy" />
+        android:src="@drawable/cdell" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -32,7 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="214dp"
         android:layout_marginBottom="0dp"
-        android:src="@drawable/psmith" />
+        android:src="@drawable/chp" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -42,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:src="@drawable/bbrothers" />
+        android:src="@drawable/clenovo" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -52,7 +45,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="212dp"
         android:layout_marginBottom="150dp"
-        android:src="@drawable/pical" />
+        android:src="@drawable/csamsung" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -62,7 +55,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="213dp"
         android:layout_marginBottom="150dp"
-        android:src="@drawable/hboss" />
+        android:src="@drawable/ctoshiba" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -72,7 +65,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="215dp"
         android:layout_marginBottom="310dp"
-        android:src="@drawable/cinglesa" />
+        android:src="@drawable/clanix" />
 
     <ImageView
         android:id="@+id/imageView16"
@@ -82,7 +75,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="218dp"
         android:layout_marginBottom="310dp"
-        android:src="@drawable/lacoste" />
+        android:src="@drawable/cgatew" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -92,7 +85,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="222dp"
         android:layout_marginBottom="460dp"
-        android:src="@drawable/polo" />
-
+        android:src="@drawable/calien" />
 
 </RelativeLayout>

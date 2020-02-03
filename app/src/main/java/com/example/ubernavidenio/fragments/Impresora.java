@@ -1,32 +1,26 @@
 package com.example.ubernavidenio.fragments;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.ubernavidenio.Interfaces.IComunicaInterface;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import com.example.ubernavidenio.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MasculinoFragment.OnFragmentInteractionListener} interface
+ * {@link Impresora.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MasculinoFragment#newInstance} factory method to
+ * Use the {@link Impresora#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MasculinoFragment extends Fragment {
-
-
+public class Impresora extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,14 +30,11 @@ public class MasculinoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    View view;
-
     private OnFragmentInteractionListener mListener;
 
-    public MasculinoFragment() {
+    public Impresora() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -51,11 +42,11 @@ public class MasculinoFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MasculinoFragment.
+     * @return A new instance of fragment Impresora.
      */
     // TODO: Rename and change types and number of parameters
-    public static MasculinoFragment newInstance(String param1, String param2) {
-        MasculinoFragment fragment = new MasculinoFragment();
+    public static Impresora newInstance(String param1, String param2) {
+        Impresora fragment = new Impresora();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,14 +63,11 @@ public class MasculinoFragment extends Fragment {
         }
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_masculino, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_impresora, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -105,8 +93,6 @@ public class MasculinoFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
-
 
     /**
      * This interface must be implemented by activities that contain this

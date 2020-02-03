@@ -2,16 +2,15 @@ package com.example.ubernavidenio.fragments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-
-import androidx.fragment.app.Fragment;
 
 import com.example.ubernavidenio.Interfaces.IComunicaInterface;
 import com.example.ubernavidenio.R;
@@ -19,14 +18,12 @@ import com.example.ubernavidenio.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MasculinoFragment.OnFragmentInteractionListener} interface
+ * {@link InfoEstablecimientos.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MasculinoFragment#newInstance} factory method to
+ * Use the {@link InfoEstablecimientos#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MasculinoFragment extends Fragment {
-
-
+public class InfoEstablecimientos extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,14 +33,16 @@ public class MasculinoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    View view;
-
     private OnFragmentInteractionListener mListener;
 
-    public MasculinoFragment() {
+    Button tienda;
+    IComunicaInterface tiendapolo;
+    View vista;
+    Activity actividad;
+
+    public InfoEstablecimientos() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -51,11 +50,11 @@ public class MasculinoFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MasculinoFragment.
+     * @return A new instance of fragment InfoEstablecimientos.
      */
     // TODO: Rename and change types and number of parameters
-    public static MasculinoFragment newInstance(String param1, String param2) {
-        MasculinoFragment fragment = new MasculinoFragment();
+    public static InfoEstablecimientos newInstance(String param1, String param2) {
+        InfoEstablecimientos fragment = new InfoEstablecimientos();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,14 +71,18 @@ public class MasculinoFragment extends Fragment {
         }
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_masculino, container, false);
-
-        return view;
+        vista=inflater.inflate(R.layout.fragment_info_establecimientos, container, false);
+        tienda=vista.findViewById(R.id.btnTienda);
+        tienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tiendapolo.ropaPolo();
+            }
+        });
+        return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -92,6 +95,10 @@ public class MasculinoFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        if (context instanceof Activity) {
+            actividad= (Activity) context;
+            tiendapolo= (IComunicaInterface) actividad;
+        }
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
@@ -105,8 +112,6 @@ public class MasculinoFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
-
 
     /**
      * This interface must be implemented by activities that contain this
