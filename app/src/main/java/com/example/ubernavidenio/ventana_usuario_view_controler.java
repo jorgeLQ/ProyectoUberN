@@ -75,10 +75,10 @@ public class ventana_usuario_view_controler extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.imageView21:
-                menus=new Intent();
+                menus=new Intent(ventana_usuario_view_controler.this,Menu_Comida.class);
                 break;
             case R.id.imageView22:
-                menus=new Intent();
+                menus=new Intent(ventana_usuario_view_controler.this,Menu_Comida.class);
                 break;
             case R.id.imageView23:
                 menus=new Intent(ventana_usuario_view_controler.this,Menu_Comida.class);
