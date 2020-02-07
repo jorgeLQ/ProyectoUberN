@@ -38,6 +38,8 @@ public class RPolo extends Fragment {
 
     Spinner sp1;
     Spinner sp2;
+    Spinner sp3;
+    Spinner sp4;
     View vista;
 
     public RPolo() {
@@ -78,13 +80,21 @@ public class RPolo extends Fragment {
         vista=inflater.inflate(R.layout.fragment_rpolo, container, false);
         sp1=(Spinner) vista.findViewById(R.id.spinner);
         sp2=(Spinner) vista.findViewById(R.id.idTallas);
+        sp3=(Spinner) vista.findViewById(R.id.spinner1);
+        sp4=(Spinner) vista.findViewById(R.id.idCantidad);
 
         ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(getContext(),
                 R.array.combotalla,android.R.layout.simple_spinner_item
         );
 
+        ArrayAdapter<CharSequence>adapter1=ArrayAdapter.createFromResource(getContext(),
+                R.array.combocantidad,android.R.layout.simple_spinner_item
+        );
+
         sp1.setAdapter(adapter);
         sp2.setAdapter(adapter);
+        sp3.setAdapter(adapter1);
+        sp4.setAdapter(adapter1);
 
         return vista;
     }
