@@ -10,9 +10,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.fragment.app.Fragment;
 
 import com.example.ubernavidenio.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,6 +44,8 @@ public class RPolo extends Fragment {
     Spinner sp3;
     Spinner sp4;
     View vista;
+
+    private boolean isFristTime=true;
 
     public RPolo() {
         // Required empty public constructor
@@ -82,6 +87,7 @@ public class RPolo extends Fragment {
         sp2=(Spinner) vista.findViewById(R.id.idTallas);
         sp3=(Spinner) vista.findViewById(R.id.spinner1);
         sp4=(Spinner) vista.findViewById(R.id.idCantidad);
+        final FloatingActionButton fab = vista.findViewById(R.id.fab);
 
         ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(getContext(),
                 R.array.combotalla,android.R.layout.simple_spinner_item
@@ -96,6 +102,89 @@ public class RPolo extends Fragment {
         sp3.setAdapter(adapter1);
         sp4.setAdapter(adapter1);
 
+
+        sp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(isFristTime){
+                    isFristTime=false;
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Snackbar.make(v, "Debe de Seleccionar una Talla y una Cantidad del Producto seleccionado", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    });
+                }else{
+                    sp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if(isFristTime){
+                                isFristTime=false;
+                            }else
+                                fab.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Snackbar.make(v, "Añadido un nuevo elemento al carrito", Snackbar.LENGTH_LONG)
+                                                .setAction("Action", null).show();
+                                    }
+                                });
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(isFristTime){
+                    isFristTime=false;
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Snackbar.make(v, "Debe de Seleccionar una talla y cantidad", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    });
+                }else{
+                    sp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if(isFristTime){
+                                isFristTime=false;
+                            }else
+                                fab.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Snackbar.make(v, "Añadido un nuevo elemento al carrito", Snackbar.LENGTH_LONG)
+                                                .setAction("Action", null).show();
+                                    }
+                                });
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         return vista;
     }
 
