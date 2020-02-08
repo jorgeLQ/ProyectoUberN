@@ -132,7 +132,7 @@ public class RPolo extends Fragment {
                         fab.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Snackbar.make(v, "Por favor seleccione una talla y producto", Snackbar.LENGTH_LONG)
+                                Snackbar.make(v, "Por favor seleccione una talla y cantidad de un producto", Snackbar.LENGTH_LONG)
                                         .setAction("Action", null).show();
                             }
                         });
@@ -175,7 +175,7 @@ public class RPolo extends Fragment {
                     fab.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Snackbar.make(v, "Por favor seleccione una talla y producto", Snackbar.LENGTH_LONG)
+                            Snackbar.make(v, "Por favor seleccione una talla y cantidad de un producto", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
                         }
                     });
