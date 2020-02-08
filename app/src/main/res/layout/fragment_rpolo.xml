@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,12 +11,21 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="195dp"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="106dp" />
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="100dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="333dp" />
 
     <TextView
         android:id="@+id/textView31"
@@ -23,8 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="147dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="100dp"
         android:text="Talla:"
         android:textSize="18sp" />
 
@@ -92,21 +102,30 @@
 
     <Spinner
         android:id="@+id/idTallas"
-        android:layout_width="197dp"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="378dp" />
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="364dp" />
+
+    <Spinner
+        android:id="@+id/idCantidad"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="70dp" />
 
     <TextView
         android:id="@+id/textView30"
-        android:layout_width="64dp"
+        android:layout_width="54dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="420dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="366dp"
         android:text="Talla:"
         android:textSize="18sp" />
 
@@ -116,8 +135,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="315dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="403dp"
         android:text=" - 65% poliéster \n - 30% algodón \n - 5% licra"
         android:textSize="14sp" />
 
@@ -127,9 +146,42 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="133dp"
         android:text=" - 50% poliéster \n - 10% licra \n - 5% algodón" />
 
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="334dp"
+        android:text="Cantidad:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="72dp"
+        android:text="Cantidad:"
+        android:textSize="18sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/colorPrimary" />
 
 </RelativeLayout>

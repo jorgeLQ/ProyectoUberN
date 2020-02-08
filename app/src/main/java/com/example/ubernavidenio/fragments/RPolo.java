@@ -10,9 +10,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.fragment.app.Fragment;
 
 import com.example.ubernavidenio.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,7 +41,11 @@ public class RPolo extends Fragment {
 
     Spinner sp1;
     Spinner sp2;
+    Spinner sp3;
+    Spinner sp4;
     View vista;
+
+    private boolean isFristTime=true;
 
     public RPolo() {
         // Required empty public constructor
@@ -76,15 +83,111 @@ public class RPolo extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         vista=inflater.inflate(R.layout.fragment_rpolo, container, false);
-        sp1=(Spinner) vista.findViewById(R.id.spinner);
-        sp2=(Spinner) vista.findViewById(R.id.idTallas);
+        sp1=(Spinner) vista.findViewById(R.id.idTallas);
+        sp2=(Spinner) vista.findViewById(R.id.spinner1);
+        sp3=(Spinner) vista.findViewById(R.id.spinner);
+        sp4=(Spinner) vista.findViewById(R.id.idCantidad);
+        final FloatingActionButton fab = vista.findViewById(R.id.fab);
 
         ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(getContext(),
                 R.array.combotalla,android.R.layout.simple_spinner_item
         );
 
+        ArrayAdapter<CharSequence>adapter1=ArrayAdapter.createFromResource(getContext(),
+                R.array.combocantidad,android.R.layout.simple_spinner_item
+        );
+
         sp1.setAdapter(adapter);
-        sp2.setAdapter(adapter);
+        sp2.setAdapter(adapter1);
+        sp3.setAdapter(adapter);
+        sp4.setAdapter(adapter1);
+
+
+        sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    String seleccioT1 = sp1.getSelectedItem().toString();
+                    if (seleccioT1.equals("XS") || seleccioT1.equals("S") || seleccioT1.equals("M") || seleccioT1.equals("L") || seleccioT1.equals("XL") || seleccioT1.equals("XXL")) {
+                        sp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                String seleccionC1 = sp2.getSelectedItem().toString();
+                                if (seleccionC1.equals("1") || seleccionC1.equals("2") || seleccionC1.equals("3") || seleccionC1.equals("4")) {
+                                    fab.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Snackbar.make(v, "Se añadio un nuevo elemento al carrito de compras", Snackbar.LENGTH_LONG)
+                                                    .setAction("Action", null).show();
+                                        }
+                                    });
+                                }
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+
+                            }
+                        });
+                    }else{
+                        fab.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Snackbar.make(v, "Por favor seleccione una talla y cantidad de un producto", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show();
+                            }
+                        });
+                    }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        sp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String seleccioT1 = sp3.getSelectedItem().toString();
+                if (seleccioT1.equals("XS") || seleccioT1.equals("S") || seleccioT1.equals("M") || seleccioT1.equals("L") || seleccioT1.equals("XL") || seleccioT1.equals("XXL")) {
+                    sp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            String seleccionC1 = sp4.getSelectedItem().toString();
+                            if (seleccionC1.equals("1") || seleccionC1.equals("2") || seleccionC1.equals("3") || seleccionC1.equals("4")) {
+                                fab.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Snackbar.make(v, "Se añadio un nuevo elemento al carrito de compras", Snackbar.LENGTH_LONG)
+                                                .setAction("Action", null).show();
+                                    }
+                                });
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }else{
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Snackbar.make(v, "Por favor seleccione una talla y cantidad de un producto", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    });
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         return vista;
     }
