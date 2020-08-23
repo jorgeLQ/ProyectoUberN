@@ -66,7 +66,7 @@ public class mapas_view_controler extends FragmentActivity implements OnMapReady
             }
         });
     }
-
+//mapa
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mGoogleMap = googleMap;

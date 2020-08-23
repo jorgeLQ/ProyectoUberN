@@ -1,0 +1,44 @@
+
+Q	java:S110("<This class has 8 parents which is greater than 5 authorized.(İ‚ªü
+b	java:S101("MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İ‚ªü
+g
+java:S1128"LRemove this unused import 'com.google.android.gms.maps.CameraUpdateFactory'.(ÁËòøúÿÿÿÿ
+b
+java:S1128 "GRemove this unused import 'com.google.android.gms.maps.model.Polyline'.(°óÚ›üÿÿÿÿ
+G
+java:S1128",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ
+H
+java:S1128	"3Remove this unused import 'android.content.Intent'.(³ğ‹G
+I
+java:S1128%".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+F
+java:S1128$"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+i
+java:S1128!"NRemove this unused import 'com.google.android.gms.maps.model.PolylineOptions'.(ÿğìŸşÿÿÿÿ
+d
+java:S1128"NRemove this unused import 'com.google.android.gms.common.api.GoogleApiClient'.(¹¾êŒ
+a
+java:S1128""KRemove this unused import 'com.google.android.libraries.places.api.Places'.(ëçöœ
+I
+java:S1128"3Remove this unused import 'android.graphics.Point'.(Õ ô²
+S
+java:S1128"8Remove this unused import 'android.util.DisplayMetrics'.(Æ…Ú×ùÿÿÿÿ
+N
+java:S1128"3Remove this unused import 'android.graphics.Color'.(øãíòşÿÿÿÿ
+F
+java:S1128&"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+\
+java:S1128"FRemove this unused import 'android.view.animation.LinearInterpolator'.(¾Öïº
+Q
+java:S1128"6Remove this unused import 'android.location.Location'.(›¡ì®øÿÿÿÿ
+`
+java:S1128"ERemove this unused import 'com.google.android.gms.maps.model.Marker'.(ƒï¢Áüÿÿÿÿ
+W
+java:S1128"<Remove this unused import 'android.animation.ValueAnimator'.(©…²øÿÿÿÿ
+p
+java:S1450*"ZRemove the "mapFragment" field and declare it as a local variable in the relevant methods.(Åıùô
+r
+java:S3252I"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(Ìîş½ùÿÿÿÿ
+r
+java:S3252J"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(ó„Âœüÿÿÿÿ
+h	java:S100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÙúÿÿÿÿ
