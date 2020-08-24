@@ -5,5 +5,3 @@ el objetivo de esta aplicación es la de generar fuentes de trabajo registrando 
 * Un establecimiento que será registrado con el producto y dirección de este.
 * Un entregador quien será el encargado de transportar los obsequios de un lugar a otro
 el programa se encuentra en una version Beta
-
-d
